@@ -1,0 +1,1 @@
+var ipsJavascriptMap={"core":{"global_core":"http://forum.defcon.uz/uploads/javascript_core/global_global_core.js.a2534a43efebc50a3516c49d55f4806b.js","admin_core":"http://forum.defcon.uz/uploads/javascript_core/admin_admin_core.js.cbadf68ccbd9d14a0b27d23df741b960.js"}};;

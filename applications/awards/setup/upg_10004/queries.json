@@ -1,0 +1,192 @@
+{
+    "1": {
+        "method": "changeColumn",
+        "params": [
+            "awards_cats",
+            "cat_title",
+            {
+                "name": "cat_title",
+                "type": "VARCHAR",
+                "length": 255,
+                "allow_null": false
+            }
+        ]
+    },
+    "2": {
+        "method": "changeColumn",
+        "params": [
+            "awards_awards",
+            "award_title",
+            {
+                "name": "award_title",
+                "type": "VARCHAR",
+                "length": 255,
+                "allow_null": false
+            }
+        ]
+    },
+    "3": {
+        "method": "addColumn",
+        "params": [
+            "awards_awards",
+            {
+                "name": "award_obtainable",
+                "type": "INT",
+                "length": 1,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "1",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "4": {
+        "method": "addColumn",
+        "params": [
+            "awards_awards",
+            {
+                "name": "award_obtainable_yes_message",
+                "type": "VARCHAR",
+                "length": 255,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "Yes",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "5": {
+        "method": "addColumn",
+        "params": [
+            "awards_awards",
+            {
+                "name": "award_obtainable_no_message",
+                "type": "VARCHAR",
+                "length": 255,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "No",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "6": {
+        "method": "changeColumn",
+        "params": [
+            "awards_awards",
+            "award_obtainable_yes_message",
+            {
+                "name": "award_obtainable_yes_message",
+                "type": "VARCHAR",
+                "length": 255,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "Award still available.",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "7": {
+        "method": "changeColumn",
+        "params": [
+            "awards_awards",
+            "award_obtainable_no_message",
+            {
+                "name": "award_obtainable_no_message",
+                "type": "VARCHAR",
+                "length": 255,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "Award no longer available.",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "8": {
+        "method": "addColumn",
+        "params": [
+            "awards_awards",
+            {
+                "name": "award_obtainable_enable",
+                "type": "INT",
+                "length": 1,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "0",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "9": {
+        "method": "changeColumn",
+        "params": [
+            "awards_awards",
+            "award_obtainable",
+            {
+                "name": "award_obtainable",
+                "type": "INT",
+                "length": 1,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "0",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "10": {
+        "method": "changeColumn",
+        "params": [
+            "awards_awards",
+            "award_obtainable_enable",
+            {
+                "name": "award_obtainable_enabled",
+                "type": "INT",
+                "length": 1,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": "0",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    }
+}

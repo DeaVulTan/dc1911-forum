@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="Default" author_name="Invision Power Services, Inc" author_url="http://www.invisionpower.com">
+ <template template_group="chat" template_name="chatform" template_data="$chats, $orientation" template_location="front" template_app="bimchatbox"><![CDATA[<div class='ipsAreaBackground_light ipsPad_half' id='chatBoxForm'>
+	<div class="bimcb_chatArea ipsBox ipsClearfix">
+		{{if \IPS\Application::load('bimchatbox')->can_Chat()}}
+			{{if !in_array(member.member_id, explode(",", settings.chatbox_conf_blocklist))}}
+				<form data-action='chatform' id="cbInput_container">
+					<input class='bimcb_chatInput' id="txt" name="txt" placeholder='{lang="chatbox_placeholder"}' autocomplete="off">
+					<div class='cbItems'>
+						<a href='#' data-ipsmenu data-ipsmenu-above='true' data-ipsmenu-appendto='#ipsLayout_contentArea' data-ipsmenu-closeonclick='false' id='elEmoticons_chatbox' data-ipstooltip title='{lang="chatbox_emoticons"}'>
+							<img src='{resource="emo.png" app="bimchatbox" location="front"}' width='24px' height='24px'>
+						</a>
+						<button type="submit" class="ipsButton ipsButton_primary ipsButton_verySmall" data-action="chat" id="chat_button"><span class="ipsType_small"><i class="fa fa-level-down fa-rotate-90"></i></span></button>
+					</div>
+				</form>
+			{{else}}
+				<div class='ipsPad_half ipsType_warning' style='margin-top: 5px;'><i class="fa fa-exclamation-triangle"></i> {lang="chatbox_error_inblock"}</div>
+			{{endif}}
+		{{else}}
+			<div class='ipsPad_half' style='margin-top: 5px;'><i class="fa fa-exclamation-triangle"></i> {lang="chatbox_error_noper"}</div>
+		{{endif}}
+	</div>
+</div>]]></template>
+ <template template_group="chat" template_name="edit" template_data="$chat" template_location="front" template_app="bimchatbox"><![CDATA[<div class='ipsBox' data-controller="bimChatBoxMain">
+	<h3 class="ipsType_reset ipsType_sectionTitle ipsClearfix">{lang="chatbox_edit"}</h3>
+	<div class="ipsPad">
+		<textarea rows="4" cols="50" id="editmsg_{$chat['id']}">{$chat['chat']}</textarea>
+		<br><br>
+		<a href="#" data-action="edit" data-id="{$chat['id']}" class="ipsButton ipsButton_primary">{lang="save"}</a>		
+	</div>
+</div>]]></template>
+ <template template_group="chat" template_name="emoticons" template_data="$emoticons" template_location="front" template_app="bimchatbox"><![CDATA[<div data-controller="bimChatBoxMain">
+	<div id='chatbox_emoticonMenu'>
+		<div class='ipsMenu_headerBar'>
+			<p class='ipsType_reset ipsPos_right'><a href='#' class='ipsType_blendLinks' data-role='categoryTrigger' data-ipsMenu data-ipsMenu-appendTo='#chatbox_emoticonMenu' id='id_more'>{lang="chatbox_emocategories"} <i class='fa fa-caret-down'></i></a></p>
+			<h4 class='ipsType_sectionHead'>{lang="chatbox_emoticons"}</h4>
+			<ul data-role='categoryMenu' class='ipsMenu ipsMenu_auto' id='id_more_menu' role='menu' style='display: none'>
+				{{foreach $emoticons as $k => $group}}
+					<li class='ipsMenu_item' role='menuitem' data-ipsMenuValue='{$k}' data-action='EmoCatChoose'><a href='#'>{$group['title']}</a></li>
+				{{endforeach}}
+			</ul>
+		</div>
+		<div class='ipsMenu_innerContent ipsEmoticons_content'>
+			{{foreach $emoticons as $k => $group}}
+				{{$cnt++;}}
+				<div id='emoCat_{$k}' class='emoCat' {{if $cnt > 1}}style="display: none;"{{endif}}>
+					<div class='ipsAreaBackground_light ipsPad_half'><strong>{$group['title']}</strong></div>
+					<div class='ipsEmoticons_category' data-categoryid='{$k}'>
+						{{foreach (array) $group['emoticons'] as $emo}}
+							<div data-action="emo_emo" class="cbEmoList" data-emoticon="{$emo['text']}" title="{$emo['text']}"><img src="{$emo['src']}"></div>
+						{{endforeach}}				
+					</div>			
+				</div>
+			{{endforeach}}
+		</div>
+	</div>
+</div>]]></template>
+ <template template_group="chat" template_name="main" template_data="$orientation" template_location="front" template_app="bimchatbox"><![CDATA[
+{{$ann = \IPS\Application::load('bimchatbox')->announcement();}}
+<div data-controller="bimChatBoxMain">
+	<div class="ipsTabs ipsClearfix" id="elChatbox" data-ipstabbar data-ipstabbar-contentarea="#elChatboxContent">
+		{{if $orientation!='vertical'}}
+			<ul class="ipsPos_right ipsList_inline ipsList_noSpacing">
+				<li>
+					<a href="#" class="ipsButton ipsButton_verySmall ipsButton_overlaid" data-action="toggleSound" data-ipstooltip="" title='{lang="chatbox_togglesound"}'><i class="fa fa-volume-up"></i></a>
+				</li>
+				{{if \IPS\Application::load('bimchatbox')->can_Manage()}}
+					<li>
+						<a href="#" class="ipsButton ipsButton_verySmall ipsButton_overlaid" data-ipsDialog data-ipsDialog-url='{url="app=bimchatbox&module=chatbox&controller=chatbox&do=cbmanage"}' data-ipsDialog-size='narrow' data-ipstooltip="" title='{lang="chatbox_management"}'><i class="fa fa-wrench"></i></a>			
+					</li>
+				{{endif}}		
+			</ul>
+		{{elseif $orientation=='vertical'}}
+			<ul class="ipsPos_right ipsList_inline ipsList_noSpacing manaButtonSmall">
+				<li>
+					<a href="#" data-action="toggleSound" data-ipstooltip="" title='{lang="chatbox_togglesound"}'><i class="fa fa-volume-up"></i></a>&nbsp;&nbsp;
+				</li>
+				{{if \IPS\Application::load('bimchatbox')->can_Manage()}}
+					<li>
+						<a href="#" data-ipsDialog data-ipsDialog-url='{url="app=bimchatbox&module=chatbox&controller=chatbox&do=cbmanage"}' data-ipsDialog-size='narrow' data-ipstooltip="" title='{lang="chatbox_management"}'><i class="fa fa-wrench"></i></a>			
+					</li>
+				{{endif}}		
+			</ul>
+		{{endif}}		
+		{{if $ann && settings.chatbox_conf_anntab == 1}}
+			<a href="#" data-action="expandTabs" id="cbexpandTabs"><i class="fa fa-caret-down"></i></a>
+			<ul role="tablist" class="ipsList_reset" id="elChatboxBar">
+				<li>
+					<a href="#" role="tab" id="chatbox" class="ipsFaded_withHover ipsTabs_item ipsTabs_activeItem {{if $orientation=='vertical'}}cbTabSmall{{endif}}" aria-selected="true">{lang="chatbox_title"}</a>
+				</li>
+				<li>
+					<a href="#" role="tab" id="cbannouncement" class="ipsFaded_withHover ipsTabs_item {{if $orientation=='vertical'}}cbTabSmall{{endif}}">{lang="chatbox_ann_title"}</a>
+				</li>
+			</ul>
+		{{else}}
+			<div class='cbTitle'>{lang="chatbox_title"}</div>
+		{{endif}}
+	</div>
+	<div id="elChatboxContent">
+		<div id="ipsTabs_elChatbox_chatbox_panel" class="ipsTabs_panel" data-tab="chatbox" aria-hidden="false" style="display: block;">	
+			{{if $ann && settings.chatbox_conf_anntab != 1}}
+				<div class="ipsAreaBackground ipsPad_half ipsClearfix">
+					{$ann|raw}
+				</div>
+			{{endif}}
+			{{if settings.chatbox_conf_ordertop == 1}}
+				{template="chatform" app="bimchatbox" group="chat" params="$chat, $orientation"}
+			{{endif}}				
+			<div id='chatboxWrap' {{if settings.chatbox_conf_height}}style='height: {setting="chatbox_conf_height"}px !important;'{{endif}}>
+				{{if settings.chatbox_conf_ordertop != 1}}
+					<div id='loadMore' data-action='loadMore' class='ipsAreaBackground_light ipsPad_half ipsType_center ipsCursor_pointer'>{lang="cb_loadmore"}</div>
+				{{endif}}
+				<ul id='chatcontent' class="ipsDataList ipsDataList_reducedSpacing ipsLoading" {{if settings.chatbox_conf_height}}style='height: {setting="chatbox_conf_height"}px !important;'{{endif}}>
+				</ul>
+				{{if settings.chatbox_conf_ordertop == 1}}
+					<div id='loadMore' data-action='loadMore' class='ipsAreaBackground_light ipsPad_half ipsType_center ipsCursor_pointer'>{lang="cb_loadmore"}</div>
+				{{endif}}				
+			</div>
+			{{if settings.chatbox_conf_ordertop != 1}}
+				{template="chatform" app="bimchatbox" group="chat" params="$chat, $orientation"}
+			{{endif}}
+		</div>
+		{{if $ann && settings.chatbox_conf_anntab == 1}}
+			<div id="ipsTabs_elChatbox_cbannouncement_panel" class="ipsTabs_panel" data-tab="cbannouncement" aria-hidden="false" style="display: none;">
+				<div class='ipsPad' id='announcementWrap' {{if settings.chatbox_conf_height}}style='height: {setting="chatbox_conf_height"}px !important;'{{endif}}>
+					{$ann|raw}
+				</div>
+			</div>	
+		{{endif}}
+	</div>
+</div>]]></template>
+ <template template_group="chat" template_name="manage" template_data="$form" template_location="front" template_app="bimchatbox"><![CDATA[<div class='ipsBox'>
+	<h3 class="ipsType_reset ipsType_sectionTitle ipsClearfix">{lang="chatbox_management"}</h3>
+	<div class="ipsPad">
+		{$form|raw}
+	</div>
+</div>
+]]></template>
+ <template template_group="embed" template_name="chatvars" template_data="$emoticons" template_location="front" template_app="bimchatbox"><![CDATA[<script type='text/javascript'>
+	ips.setSetting( 'chatbox_conf_interval', {setting="chatbox_conf_interval"} );
+	ips.setSetting( 'chatbox_soundEnabled', ips.utils.db.get( 'chatbox', 'sounds' ) );
+	ips.setSetting( 'chatbox_topStyle', {setting="chatbox_conf_ordertop"} );	
+	ips.setSetting( 'chatbox_maxMSG', {setting="chatbox_conf_chatlimit"} );
+	ips.setSetting( 'chatbox_maxEmoticons', {setting="chatbox_conf_maxemoticons"} );	
+	ips.setSetting( 'chatbox_Emoticons', {expression="json_encode( $emoticons )" raw="true"} );	
+	ips.setSetting( 'chatbox_imgPost', {setting="chatbox_conf_imgPost"} );	
+	ips.setSetting( 'chatbox_24h', {{if \IPS\Settings::i()->chatbox_conf_timeformat == '24'}}true{{else}}false{{endif}} );	
+	ips.setSetting( 'chatbox_getAll', false );
+	{{if \IPS\Member::loggedin()->member_id}}
+		ips.setSetting( 'chatbox_myname', '{expression="\IPS\Member::loggedin()->name"}' );
+	{{endif}}
+</script>]]></template>
+ <template template_group="widgets" template_name="bimchatbox" template_data="$orientation='vertical'" template_location="front" template_app="bimchatbox">{template=&quot;main&quot; group=&quot;chat&quot; app=&quot;bimchatbox&quot; params=&quot;$orientation&quot;}</template>
+ <css css_location="front" css_app="bimchatbox" css_attributes="" css_path="." css_name="chatbox.css">#chatboxWrap {&#13;
+	height: 300px; &#13;
+	overflow-y: scroll;&#13;
+	overflow-x: hidden;&#13;
+	resize: vertical;&#13;
+}&#13;
+&#13;
+#chatcontent {&#13;
+	width: 100%;&#13;
+}&#13;
+&#13;
+#elChatbox { margin-bottom: 0px !important; }&#13;
+&#13;
+#cbInput_container { position:relative; padding:0; margin:0; }&#13;
+&#13;
+#chat_button { line-height: 24px !important;}&#13;
+.cbItems {&#13;
+	position: absolute; float: right; top: 5px; right: 5px;&#13;
+}&#13;
+.cbItems img { margin-right: 5px; }&#13;
+&#13;
+/* sua loi khong xuong hang cho long text */&#13;
+.chatboxLink {&#13;
+	/* For Firefox */&#13;
+	white-space: pre-wrap;&#13;
+	word-break: break-all;&#13;
+&#13;
+	/* For Chrome and IE */&#13;
+	word-wrap: break-word;&#13;
+}&#13;
+&#13;
+.cbTitle {&#13;
+	height: 40px; color: #fff; line-height: 30px;&#13;
+}&#13;
+&#13;
+.cbDisconnect {&#13;
+	width: 100%;&#13;
+	height: 100%;&#13;
+	position: absolute;&#13;
+	top: 0px;&#13;
+	left: 0px;&#13;
+	z-index: 1000;&#13;
+	background: #fff;&#13;
+	opacity: 0.8;&#13;
+}&#13;
+.cbDisconnectMSG {&#13;
+	text-align: center;&#13;
+}&#13;
+&#13;
+.bimcb_chatInput {&#13;
+	width: 100% !important;&#13;
+	max-width: 100% !important;&#13;
+	margin-top: 2px;&#13;
+	height: 36px;&#13;
+	padding: 8px 90px 8px 8px !important;&#13;
+	border: none !important;&#13;
+	background: transparent;&#13;
+}&#13;
+#cbInput_container input{&#13;
+	margin: 0px !important;&#13;
+}&#13;
+&#13;
+#cbInput_container input:focus {&#13;
+	border: none !important;&#13;
+	outline: 0 !important;&#13;
+}&#13;
+&#13;
+.bimcb_editform {&#13;
+	width: 100% !important;&#13;
+	max-width: 100% !important;&#13;
+}&#13;
+&#13;
+.cbEmoList {&#13;
+	float: left; &#13;
+	width: 55px; &#13;
+	height: 55px; &#13;
+	text-align: center;&#13;
+}&#13;
+&#13;
+.cbEmoList img {&#13;
+	cursor: pointer; cursor: hand;&#13;
+}&#13;
+&#13;
+.cbTabSmall { font-size: 12px !important; padding-right: 8px !important; padding-left: 8px !important; }&#13;
+&#13;
+.ipsWidget.ipsWidget_horizontal[data-blockid^=&quot;app_bimchatbox&quot;] {&#13;
+	padding-top: 5px !important;&#13;
+}&#13;
+&#13;
+.manaButtonSmall a { color: #fff; line-height: 30px; }</css>
+ <resource name="emo.png" app="bimchatbox" location="front" path="/">iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAilBMVEUAAAD/////zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE1mRQBwTQVwURB5Vgp5XCCDXg6DaDCMZxOMdECWbxiWf1CfeB2fi2CpgCKziSezooC8kSu8ro/GmTDGuZ/PojXPxa/ZqjrZ0b/isz/i3M/su0Ps6N/1xEj18+//zE3////2Xdz4AAAADnRSTlMAACBAUGCAj5+vv8/f71szsTQAAAJqSURBVFjD7ZjRlqogFIY9pGIlOnNKyxltHEetjHn/1zuKWoKgiFye/6LWAvmWyAb+vY0/YgEL7lzcyd1BCwgfNQxD1GU6T8ZLrmMuAwGIsEAIAmnQZosntd1IgYCDZ+WAeZCNsISQPQMCeyypPZgCmQhLC5likI0XyRaBHLxQDh+0mDMgDUEKnBdpALKxkmwWZGJFmTQIIFUQAhRoj5W1H4JsvEL2C6Q+sX5yHcjBq+T0oA1eqU0H2q4FbVsQwKsFCAiOOy6+5/kX+XZIQOMlSz2iVLYdowbE2Rzv7YB32fZ6o9Qgztp7nSrJ9joCapCrA+QaBm/N+gGy7WTdLD0gy4B6QNDY6QHtDM63Vlj++mvzIn5xQNbighZvESFIQf9BCqAylxhV5bcRiA7I6tAE3CnObiLGLYtPTWAGFROQ9BaJvKcOwWd8yYlu5PcSfwaHV3/EbBHI3U0yYjYtdYxUyiCLPtgI6F4k56N4/N9zUtxHIMActc0Dx8dvrWvxlSQh0bH9C5Pkq7g2fY8jC3LZw58cFB+/M/oYHSYOex21q9a+k0jt+9CrZrIXZNZ+h7dCzCne2mcy9oKkr+zuEPTOdz7mfvY4xyQcm4j0uTrh92iCj+/w2Z2OTQRtawax64XJz7WHXH+ScNB14Nga2miVctFY8owWHQGpDCflWj/GjEbznEhgRhl7HC3iDO0xa9jjaU4sNuys0858McbPplII1rdVJxHnVE0mNeMsIg94mCCfS7M49r+MmAn6USmR+HETiTwOegcSxLlkKqovOdaXrusrIOgraegrsmgs++grRGksjWks1imUD/8BPYZhbRqXvkIAAAAASUVORK5CYII=</resource>
+</theme>

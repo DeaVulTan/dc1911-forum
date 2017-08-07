@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="videos" version="100014">
+  <word key="__app_videos" js="0">Videos</word>
+  <word key="frontnavigation_videos" js="0">Videos</word>
+  <word key="profile_videos_Videos" js="0">Videos</word>
+  <word key="menu__videos_videos" js="0">Videos</word>
+  <word key="menu__videos_videos_categories" js="0">Categories</word>
+  <word key="menu__videos_videos_settings" js="0">Settings</word>
+  <word key="menu__videos_videos_sites" js="0">Media Sites</word>
+  <word key="menu__videos_videos_permissions" js="0">Permissions</word>
+  <word key="module__videos_categories" js="0">Categories</word>
+  <word key="module__videos_videos" js="0">Videos</word>
+  <word key="module__videos_comments" js="0">Video Comments</word>
+  <word key="group__videos_Videos" js="0">Videos</word>
+  <word key="page__listall" js="0">All Videos</word>
+  <word key="video_video" js="0">Video</word>
+  <word key="module__sites" js="0">Media Sites</word>
+  <word key="__indefart_videos_comments" js="0">a comment on a video</word>
+  <word key="__indefart_videos" js="0">a video</word>
+  <word key="module__videos_categories_sg" js="0">Category</word>
+  <word key="videos_pl" js="0">Videos</word>
+  <word key="videos_video_pl" js="0">Videos</word>
+  <word key="videos_comments_pl" js="0">Video Comments</word>
+  <word key="filestorage__videos_CategoryImage" js="0">Video Category Images</word>
+  <word key="filestorage__videos_Thumbs" js="0">Video Thumbnails</word>
+  <word key="filestorage__videos_Videos" js="0">Video Files</word>
+  <word key="editor__videos_Categories" js="0">Video Categories</word>
+  <word key="loc_videos_viewing_video" js="0">Viewing Video: %s</word>
+  <word key="loc_videos_index" js="0">Viewing Videos Index</word>
+  <word key="loc_videos_viewing_category" js="0">Viewing video category: %s</word>
+  <word key="r__categories" js="0">Categories</word>
+  <word key="r__settings" js="0">Settings</word>
+  <word key="r__permissions" js="0">Permissions</word>
+  <word key="r__sites" js="0">Media Sites</word>
+  <word key="r__categories_manage" js="0">Can manage categories?</word>
+  <word key="r__settings_manage" js="0">Can manage settings?</word>
+  <word key="r__permissions_manage" js="0">Can manage permissions?</word>
+  <word key="r__sites_manage" js="0">Can manage media sites?</word>
+  <word key="cat_only_error" js="0">You can not add videos to this category.</word>
+  <word key="no_view_videos_perms" js="0">You do not have permission to view the Videos application.</word>
+  <word key="video_no_category_add_perms" js="0">You do not have permission to add to any categories.</word>
+  <word key="videocomments_all" js="0">All</word>
+  <word key="videocomments_mycomments" js="0">My Comments</word>
+  <word key="featured_videos" js="0">Featured Video{!#[1: ][?:s]}</word>
+  <word key="view_video" js="0">View Video</word>
+  <word key="add_video" js="0">Add Video</word>
+  <word key="view_video_categories" js="0">View Categories</word>
+  <word key="latest_videos" js="0">Latest Videos</word>
+  <word key="video__comment_placeholder" js="0">Add your comment here.</word>
+  <word key="video_auto_follow_suffix" js="0">Notify me of comments</word>
+  <word key="video_submit_comment" js="0">Add Comment</word>
+  <word key="go_to_video_category" js="0">Go to %s</word>
+  <word key="go_back_to_video_category" js="0">Go To Video Listing</word>
+  <word key="video_edit_details" js="0">Edit Video</word>
+  <word key="video_edit_title" js="0">Edit Video</word>
+  <word key="video_move_title" js="0">Move this video</word>
+  <word key="feature_title_video" js="0">Feature this video</word>
+  <word key="unfeature_title_video" js="0">Unfeature this video</word>
+  <word key="hide_title_video" js="0">Hide this video</word>
+  <word key="unhide_title_video" js="0">Unhide this video</word>
+  <word key="approve_title_video" js="0">Approve this video</word>
+  <word key="report_video" js="0">Report Video</word>
+  <word key="num_video_views" js="0">{# [1:view][?:views]}</word>
+  <word key="num_video_comments" js="0">{# [1:comment][?:comments]}</word>
+  <word key="video__save" js="0">Submit</word>
+  <word key="video_container" js="0">Category</word>
+  <word key="videos_filter_myvideos" js="0">My Videos</word>
+  <word key="video_discussion_topic_title" js="0">View video discussion topic.</word>
+  <word key="video_discussion_topic" js="0">Discussion Topic</word>
+  <word key="duplicate_media_url" js="0">That media url has already been added.</word>
+  <word key="latest_videos_main" js="0">Latest Videos</word>
+  <word key="latest_videos_category" js="0">%s Latest Videos</word>
+  <word key="videos_rss_offline" js="0">This RSS feed is disabled</word>
+  <word key="no_video_categories_found" js="0">No categories found.</word>
+  <word key="videos_select_category" js="0">Select Category</word>
+  <word key="videos_continue" js="0">Continue</word>
+  <word key="videos" js="0">Videos</word>
+  <word key="new_videos" js="0">New Videos</word>
+  <word key="videos_by" js="0">By</word>
+  <word key="videos_in" js="0">In</word>
+  <word key="video_comments" js="0">Comments</word>
+  <word key="video_categories" js="0">Categories</word>
+  <word key="video_subcategories" js="0">Subcategories</word>
+  <word key="video_category" js="0">Category</word>
+  <word key="extra_video_main" js="0">Main</word>
+  <word key="video_all" js="0">All</word>
+  <word key="video_filter_myvideos" js="0">My Videos</word>
+  <word key="my_videos_button" js="0">My Videos</word>
+  <word key="video_select_rows" js="0">Select Rows</word>
+  <word key="video_select_rows_tooltip" js="0">Select rows based on type</word>
+  <word key="video_sort_by" js="0">Sort By</word>
+  <word key="video_sort_date" js="0">Date Added</word>
+  <word key="video_sort_updated" js="0">Last Updated</word>
+  <word key="video_sort_title" js="0">Video Title</word>
+  <word key="video_sort_views" js="0">Views</word>
+  <word key="video_sort_rating" js="0">Rating</word>
+  <word key="video_sort_num_comments" js="0">Total Comments</word>
+  <word key="video_description" js="0">Description</word>
+  <word key="vc_cat_general" js="0">General</word>
+  <word key="vc_cat_settings" js="0">Settings</word>
+  <word key="vc_cat_name" js="0">Name</word>
+  <word key="vc_cat_name_desc" js="0">Name of this category.</word>
+  <word key="vc_cat_group" js="0">Group</word>
+  <word key="vc_parent_id" js="0">Parent Category</word>
+  <word key="vc_parent_id_zeroVal" js="0">Make parent category</word>
+  <word key="vc_description" js="0">Description</word>
+  <word key="vc_cat_rules" js="0">Category Rules</word>
+  <word key="vc_cat_rules_desc" js="0">Category rules will be displayed when viewing a category.</word>
+  <word key="vc_cat_rules_placeholder" js="0">Enter this categories rules.</word>
+  <word key="vc_cat_image" js="0">Image</word>
+  <word key="vc_cat_image_desc" js="0">Icon to be displayed for this category?</word>
+  <word key="vc_cat_only" js="0">Category Only</word>
+  <word key="vc_cat_only_desc" js="0">Disable content from being added?</word>
+  <word key="vc_view_videos" js="0">View video list</word>
+  <word key="vc_view_videos_desc" js="0">Show video list regardless if permissions allow direct viewing of videos?</word>
+  <word key="vc_cat_rss" js="0">Category RSS</word>
+  <word key="vc_use_portal" js="0">Enable Widgets</word>
+  <word key="vc_use_portal_desc" js="0">Show widgets in this category?</word>
+  <word key="vc_display_type" js="0">Category Display</word>
+  <word key="vc_display_type_desc" js="0">Select the default display type for this category.</word>
+  <word key="vc_display_type_thumbnails" js="0">Thumbnails</word>
+  <word key="vc_display_type_list" js="0">List</word>
+  <word key="vc_fid" js="0">Discussion Topic</word>
+  <word key="vc_fid_zeroVal" js="0">Do not create topic.</word>
+  <word key="vc_sort_by" js="0">Sort By</word>
+  <word key="vc_sort_date" js="0">Date Added</word>
+  <word key="vc_sort_last_updated" js="0">Last Updated</word>
+  <word key="vc_sort_title" js="0">Video Title</word>
+  <word key="vc_sort_views" js="0">Views</word>
+  <word key="vc_sort_video_rating" js="0">Rating</word>
+  <word key="vc_sort_num_comments" js="0">Total Comments</word>
+  <word key="vc_sort_order" js="0">Order</word>
+  <word key="vc_sort__desc" js="0">Descending (Z-A)</word>
+  <word key="vc_sort__asc" js="0">Ascending (A-Z)</word>
+  <word key="vc_per_page" js="0">Videos Per Page</word>
+  <word key="vc_cat_sorting" js="0">Sorting</word>
+  <word key="vc_cat_tags" js="0">Tags</word>
+  <word key="vc_tags_enable" js="0">Enable tags?</word>
+  <word key="vc_tags_prefixes" js="0">Enable prefixes?</word>
+  <word key="vc_tags_predefined" js="0">Defined Tags</word>
+  <word key="vc_tags_predefined_desc" js="0">If using a closed system, users will have to choose from these tags. If using an open system, tags entered here will show as suggestions.</word>
+  <word key="vc_tags_predefined_unlimited" js="0">Use default</word>
+  <word key="perm_videocategory_perm__label" js="0"></word>
+  <word key="perm_videocategory_perm__view" js="0">View Category</word>
+  <word key="perm_videocategory_perm__read" js="0">View Videos</word>
+  <word key="perm_videocategory_perm__add" js="0">Add Video</word>
+  <word key="perm_videocategory_perm__comment" js="0">Add Comment</word>
+  <word key="perm_videocategory_perm__auto" js="0">Auto Approve</word>
+  <word key="module__videos_categories_add_child" js="0">Add Subcategory</word>
+  <word key="add_media_site" js="0">Add Media Site</word>
+  <word key="rebuild_videos" js="0">Rebuild Videos</word>
+  <word key="vmedia_site_settings" js="0">Site Settings</word>
+  <word key="vmedia_name" js="0">Site Name</word>
+  <word key="vmedia_enabled" js="0">Enable?</word>
+  <word key="vmedia_host" js="0">Host URL</word>
+  <word key="vmedia_url" js="0">Example URL</word>
+  <word key="vmedia_oembed" js="0">oEmbed URL</word>
+  <word key="vmedia_name_desc" js="0">Enter the name of this media site. e.g. YouTube</word>
+  <word key="vmedia_host_desc" js="0">Enter the host url of this media site. e.g. youtube.com</word>
+  <word key="vmedia_url_desc" js="0">Enter an example url for your users. e.g. https://www.youtube.com/watch?v=H45tHyArAgU</word>
+  <word key="vmedia_oembed_desc" js="0">Enter the full oEmbed url. e.g. https://www.youtube.com/oembed</word>
+  <word key="video_rebuild_processing" js="0">Processing</word>
+  <word key="videos_settings" js="0">Videos</word>
+  <word key="video_thumbnails_uploads" js="0"><![CDATA[Thumbnails & Uploads]]></word>
+  <word key="video_topic_settings" js="0">Discussion Topic</word>
+  <word key="video_portal_settings" js="0">Portal</word>
+  <word key="video_featured_settings" js="0">Featured</word>
+  <word key="video_checks" js="0">Checks</word>
+  <word key="video_thumbnails_settings" js="0">Thumbnails</word>
+  <word key="video_uploads" js="0">Video Uploads</word>
+  <word key="vs_enable_rss" js="0">Enable RSS Feed?</word>
+  <word key="vs_enable_rss_desc" js="0">Add an rss feed of the latest videos?</word>
+  <word key="vs_members_videos_box_limit" js="0">Number of videos to show?</word>
+  <word key="vs_members_videos_box_limit_desc" js="0">Number of new videos to show on the videos front page?</word>
+  <word key="vs_members_videos_box_sort_by" js="0">How to sort videos?</word>
+  <word key="vs_members_videos_box_sort_by_desc" js="0">Which field will be used to sort front page videos?</word>
+  <word key="vs_members_videos_box_sort_order" js="0">Direction to sort videos?</word>
+  <word key="vs_members_videos_box_sort_order_desc" js="0">In what direction will the front page videos be ordered?</word>
+  <word key="vs_members_videos_box_sort_by_date_added_sort" js="0">Date Added</word>
+  <word key="vs_members_videos_box_sort_by_last_updated_sort" js="0">Date Updated</word>
+  <word key="vs_members_videos_box_sort_by_title_sort" js="0">Video Title</word>
+  <word key="vs_members_videos_box_sort_by_views_sort" js="0">Video Views</word>
+  <word key="vs_members_videos_box_sort_by_rating_sort" js="0">Video Rating</word>
+  <word key="vs_members_videos_box_sort_order_desc_sort" js="0">Descending (Z-A)</word>
+  <word key="vs_members_videos_box_sort_order_asc_sort" js="0">Ascending (A-Z)</word>
+  <word key="vs_featured_videos" js="0">Show featured videos?</word>
+  <word key="vs_featured_videos_desc" js="0">Display a featured videos block at the top of the videos front page?</word>
+  <word key="vs_featured_embed" js="0">Use embed code?</word>
+  <word key="vs_featured_embed_desc" js="0">Use the videos embed code in the features videos block?</word>
+  <word key="vs_add_approval" js="0">Require approval of new videos?</word>
+  <word key="vs_edit_approval" js="0">Require approval of updated videos?</word>
+  <word key="vs_duplicate_media_url" js="0">Check for duplicate media urls?</word>
+  <word key="vs_enable_comments" js="0">Enable video comments?</word>
+  <word key="vs_enable_comments_desc" js="0">Allow comments to be added to videos?</word>
+  <word key="vs_comment_moderation" js="0">Require approval of new comments?</word>
+  <word key="vs_comment_moderation_desc" js="0">Approve new comments before displaying?</word>
+  <word key="vs_comments_per_page" js="0">How many comments per page?</word>
+  <word key="vs_comments_per_page_desc" js="0">How many comments would you like to display per page in the video page?</word>
+  <word key="vs_enable_thumbnail" js="0">Enable thumbnails?</word>
+  <word key="vs_enable_thumbnail_desc" js="0">Display a thumbnail with each video?</word>
+  <word key="vs_thumbnail_upload" js="0">Enable thumbnail uploads?</word>
+  <word key="vs_thumbnail_upload_desc" js="0">Allow thumbnail images to be uploaded?</word>
+  <word key="vs_enable_thumbnail_url" js="0">Enable thumbnail urls?</word>
+  <word key="vs_enable_thumbnail_url_desc" js="0">Allow remote thumbnail urls to be posted?</word>
+  <word key="vs_image_extensions" js="0">Allowed thumbnail extensions?</word>
+  <word key="vs_image_maximum_dimensions" js="0">Maximum thumbnail dimensions?</word>
+  <word key="vs_image_maximum_dimensions_desc" js="0">Images that exceed this limit will be automatically resized.</word>
+  <word key="vs_standard_thumbnail" js="0">Standard thumbnail dimensions</word>
+  <word key="vs_standard_thumbnail_desc" js="0">Enter the dimensions that thumbnails will use.</word>
+  <word key="vs_video_upload" js="0">Enable video uploads?</word>
+  <word key="vs_video_upload_desc" js="0"><![CDATA[Allow direct upload of video files? <strong>Must be HTML5 compatible video files.</strong>]]></word>
+  <word key="vs_submit_video_url" js="0">Submit video urls?</word>
+  <word key="vs_submit_video_url_desc" js="0">Allow remote video urls to be posted?</word>
+  <word key="vs_video_upload_extensions" js="0">Allow video file extensions?</word>
+  <word key="vs_video_upload_size" js="0">Maximum video size?</word>
+  <word key="vs_create_topic" js="0">Create discussion topic?</word>
+  <word key="vs_create_topic_desc" js="0">Create a new discussion topic when a new video is posted?</word>
+  <word key="vs_topic_own" js="0">Use video submitter?</word>
+  <word key="vs_topic_own_desc" js="0">Use video submitter as topic author?</word>
+  <word key="vs_topic_author" js="0">Author</word>
+  <word key="vs_topic_author_desc" js="0">Enter the member name of the topic author.</word>
+  <word key="vs_topic_title" js="0">Topic Title</word>
+  <word key="vs_topic_forum" js="0">Topic Forum</word>
+  <word key="vs_topic_template" js="0">Topic Post</word>
+  <word key="vs_topic_forum_zeroVal" js="0">Use category setting.</word>
+  <word key="vs_extra_videos" js="0">Enable extra videos?</word>
+  <word key="vs_extra_videos_desc" js="0">Allow extra media url videos to be added to each video?</word>
+  <word key="vs_max_video_width" js="0">Maximum video width</word>
+  <word key="vs_max_video_width_desc" js="0">Set the maximum video width of embeded videos. Will not retroactively apply to existing videos.</word>
+  <word key="videos_setting_Header" js="0">Videos</word>
+  <word key="vs_default_video_type" js="0">Default video type</word>
+  <word key="vs_default_video_type_desc" js="0">What option will be the default choice for new videos? Make sure you selected option is enabled in the settings.</word>
+  <word key="vs_default_thumbnail_type" js="0">Default thumbnail type</word>
+  <word key="vs_default_thumbnail_type_desc" js="0">What option will be the default choice for new videos? Make sure you selected option is enabled in the settings.</word>
+  <word key="videos_management" js="0">Videos Permissions</word>
+  <word key="video_comments_management" js="0">Comments Permissions</word>
+  <word key="video_moderate_management" js="0">Moderate Permissions</word>
+  <word key="g_vs_view" js="0">Can view videos?</word>
+  <word key="g_vs_add_video" js="0">Can add videos?</word>
+  <word key="g_vs_edit_video" js="0">Can edit own videos?</word>
+  <word key="g_vs_delete_video" js="0">Can delete own videos?</word>
+  <word key="g_vs_rate_video" js="0">Can rate videos?</word>
+  <word key="g_vs_rate_video_change" js="0">Can change own rating?</word>
+  <word key="g_vs_report_video" js="0">Can report videos?</word>
+  <word key="g_vs_embed_video" js="0">Can post embed code?</word>
+  <word key="g_vs_embed_video_desc" js="0">Allows a member to post raw html embed codes. Only enable for trusted member groups!</word>
+  <word key="g_vs_view_comments" js="0">Can view comments?</word>
+  <word key="g_vs_add_comments" js="0">Can add own comments?</word>
+  <word key="g_vs_edit_comments" js="0">Can edit own comments?</word>
+  <word key="g_vs_delete_comments" js="0">Can delete own comments?</word>
+  <word key="g_vs_comments_per_member" js="0">Comments allowed per member?</word>
+  <word key="g_vs_m_edit_videos" js="0">Can edit any video?</word>
+  <word key="g_vs_m_delete_videos" js="0">Can delete any video?</word>
+  <word key="g_vs_m_edit_comments" js="0">Can edit any comment?</word>
+  <word key="g_vs_m_delete_comments" js="0">Can delete any comment?</word>
+  <word key="g_vs_m_manage" js="0">Can moderate all videos and comments?</word>
+  <word key="block_videosVideos" js="0">Videos Feed</word>
+  <word key="block_videosVideos_desc" js="0">Display a feed of the forums videos.</word>
+  <word key="block_videosComments" js="0">Latest Comments</word>
+  <word key="block_videosComments_desc" js="0">Display a list of the latest video comments.</word>
+  <word key="block_videosStats" js="0">Video Statistics</word>
+  <word key="block_videosStats_desc" js="0">Display a list of the latest video statistics.</word>
+  <word key="total_videos" js="0">Videos</word>
+  <word key="total_video_comments" js="0">Comments</word>
+  <word key="total_video_views" js="0">Views</word>
+  <word key="latest_video" js="0">Latest Video</word>
+  <word key="no_new_videos" js="0">No new videos.</word>
+  <word key="no_new_video_comments" js="0">No new comments.</word>
+  <word key="block_videosVideos_last_updated" js="0">Last Updated</word>
+  <word key="block_videosVideos_top_rated" js="0">Top Rated</word>
+  <word key="block_videosVideos_latest_videos" js="0">Latest Videos</word>
+  <word key="video_cats" js="0">Select category to use</word>
+  <word key="video_sort" js="0">Sort field</word>
+  <word key="video_direction" js="0">Sort direction</word>
+  <word key="number_videos" js="0">Number of videos</word>
+  <word key="video_cats_zeroVal" js="0">Select videos from all categories.</word>
+  <word key="video_direction__desc" js="0">Descending (Z-A)</word>
+  <word key="video_direction__asc" js="0">Ascending (A-Z)</word>
+  <word key="date_sort" js="0">Date Added</word>
+  <word key="last_updated_sort" js="0">Last Updated</word>
+  <word key="video_rating_sort" js="0">Video Rating</word>
+  <word key="total_video_submitters" js="0">Submitters</word>
+  <word key="videosComments_number_comments" js="0">Number of comments?</word>
+  <word key="view_all_categories" js="0">View All Categories</word>
+  <word key="view_all_comments" js="0">View All Comments</word>
+  <word key="view_all_videos" js="0">View All Videos</word>
+  <word key="widget_title" js="0">Enter the name of this widget</word>
+  <word key="videosVideos_category_videos" js="0">Show category videos?</word>
+  <word key="videosVideos_category_videos_desc" js="0">Show videos from this category? (Widget must be placed in the video category page)</word>
+  <word key="extra_videos__key" js="0">Video Title</word>
+  <word key="extra_videos__value" js="0">https://www.youtube.com/watch?v=H45tHyArAgU</word>
+  <word key="video_title" js="0">Name</word>
+  <word key="video_title_desc" js="0">Enter the name of this video.</word>
+  <word key="video_tags" js="0">Tags</word>
+  <word key="video_type" js="0">Media Type</word>
+  <word key="video_type_desc" js="0">Select the type of media.</word>
+  <word key="videotype__media_url" js="0">Enter media url</word>
+  <word key="videotype__media_embed" js="0">Paste embed code</word>
+  <word key="videotype__media_upload" js="0">Upload media file</word>
+  <word key="videotype__media_upload_url" js="0">Enter url to uploaded file</word>
+  <word key="media_url" js="0">Media URL</word>
+  <word key="media_url_desc" js="0">Enter any oEmbed supported media url.</word>
+  <word key="media_embed" js="0">Media Embed</word>
+  <word key="media_embed_desc" js="0">Paste the embed code for your media here.</word>
+  <word key="media_upload" js="0">Media Upload</word>
+  <word key="media_upload_desc" js="0">Upload any Flowplayer supported media file.</word>
+  <word key="media_upload_url" js="0">Media Upload URL</word>
+  <word key="media_upload_url_desc" js="0">Enter the url to an already uploaded Flowplayer supported media file.</word>
+  <word key="thumbnail_type" js="0">Thumbnail Type</word>
+  <word key="thumbnail_type_desc" js="0">Selecting automatic will attempt to save a thumbnail for you. Only works with media urls.</word>
+  <word key="thumbtype__0" js="0">Automatic</word>
+  <word key="thumbtype__1" js="0">Upload thumbnail</word>
+  <word key="thumbtype__2" js="0">Enter url to thumbnail</word>
+  <word key="thumbnail_upload" js="0">Thumbnail Upload</word>
+  <word key="thumbnail_upload_url" js="0">Thumbnail URL</word>
+  <word key="video_auto_follow" js="0">Auto Follow</word>
+  <word key="extra_videos_enable" js="0">Add Extra Videos?</word>
+  <word key="extra_videos_enable_desc" js="0">Add extra videos to this video?</word>
+  <word key="extra_videos" js="0">Extra Videos</word>
+  <word key="extra_videos_desc" js="0">List the title and video url of your extra videos.</word>
+  <word key="media" js="0">Enter Media URL</word>
+  <word key="media_desc" js="0">Enter in your media url and we will attempt to access the title and description automatically. (Leave empty to enter it manually.)</word>
+ </app>
+</language>

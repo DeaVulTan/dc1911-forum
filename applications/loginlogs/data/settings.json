@@ -1,0 +1,22 @@
+[
+    {
+        "key": "llogs_days",
+        "default": "90"
+    },
+    {
+        "key": "llogs_groups",
+        "default": "*"
+    },
+    {
+        "key": "llogs_logpp",
+        "default": "25"
+    },
+    {
+        "key": "llogs_logpruning",
+        "default": "1"
+    },
+    {
+        "key": "llogs_logtype",
+        "default": "member"
+    }
+]

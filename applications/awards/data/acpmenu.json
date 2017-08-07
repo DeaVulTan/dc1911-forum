@@ -1,0 +1,36 @@
+{
+    "awards": {
+        "manage": {
+            "tab": "awards",
+            "controller": "manage",
+            "do": "",
+            "restriction": null
+        },
+        "logs": {
+            "tab": "awards",
+            "controller": "logs",
+            "do": "",
+            "restriction": null
+        },
+        "settings": {
+            "tab": "awards",
+            "controller": "settings",
+            "do": "",
+            "restriction": null
+        }
+    },
+    "upgrade": {
+        "awards_system": {
+            "tab": "awards",
+            "controller": "awards_system",
+            "do": "",
+            "restriction": null
+        },
+        "hq_awards": {
+            "tab": "awards",
+            "controller": "hq_awards",
+            "do": "",
+            "restriction": null
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "topLevel": "",
+  "pages": {
+    "awards": {
+      "friendly": "awards",
+      "real": "app=awards&module=awards&controller=awards"
+    },
+    "setting_awards": {
+      "friendly": "settings/awards",
+      "real": "app=core&module=system&controller=settings&area=awards"
+    }
+  }
+}

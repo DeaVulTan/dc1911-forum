@@ -1,0 +1,76 @@
+{
+    "1": {
+        "method": "delete",
+        "params": [
+            "core_sys_lang_words",
+            [
+                "word_app=? AND word_key=?",
+                "videos",
+                "num_views"
+            ]
+        ]
+    },
+    "2": {
+        "method": "changeColumn",
+        "params": [
+            "videos_comments",
+            "member_name",
+            {
+                "name": "comment_member_name",
+                "type": "VARCHAR",
+                "length": 255,
+                "decimals": null,
+                "values": [],
+                "allow_null": false,
+                "default": "",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "3": {
+        "method": "changeColumn",
+        "params": [
+            "videos_comments",
+            "video_id",
+            {
+                "name": "comment_video_id",
+                "type": "INT",
+                "length": 5,
+                "decimals": null,
+                "values": [],
+                "allow_null": false,
+                "default": "0",
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    },
+    "4": {
+        "method": "changeColumn",
+        "params": [
+            "videos_comments",
+            "ip_address",
+            {
+                "name": "comment_ip_address",
+                "type": "VARCHAR",
+                "length": 46,
+                "decimals": null,
+                "values": [],
+                "allow_null": true,
+                "default": null,
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
+            }
+        ]
+    }
+}

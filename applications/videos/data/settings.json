@@ -1,0 +1,130 @@
+[
+    {
+        "key": "vs_add_approval",
+        "default": "0"
+    },
+    {
+        "key": "vs_comment_moderation",
+        "default": "0"
+    },
+    {
+        "key": "vs_comments_per_page",
+        "default": "5"
+    },
+    {
+        "key": "vs_create_topic",
+        "default": "1"
+    },
+    {
+        "key": "vs_default_thumbnail_type",
+        "default": "0"
+    },
+    {
+        "key": "vs_default_video_type",
+        "default": "media_url"
+    },
+    {
+        "key": "vs_duplicate_media_url",
+        "default": "0"
+    },
+    {
+        "key": "vs_edit_approval",
+        "default": "0"
+    },
+    {
+        "key": "vs_enable_comments",
+        "default": "1"
+    },
+    {
+        "key": "vs_enable_rss",
+        "default": "1"
+    },
+    {
+        "key": "vs_enable_thumbnail",
+        "default": "1"
+    },
+    {
+        "key": "vs_enable_thumbnail_url",
+        "default": "1"
+    },
+    {
+        "key": "vs_extra_videos",
+        "default": "1"
+    },
+    {
+        "key": "vs_featured_embed",
+        "default": "0"
+    },
+    {
+        "key": "vs_featured_videos",
+        "default": "1"
+    },
+    {
+        "key": "vs_image_extensions",
+        "default": "gif,jpg,jpeg,png"
+    },
+    {
+        "key": "vs_image_maximum_dimensions",
+        "default": "400,400"
+    },
+    {
+        "key": "vs_max_video_width",
+        "default": "0"
+    },
+    {
+        "key": "vs_members_videos_box_limit",
+        "default": "12"
+    },
+    {
+        "key": "vs_members_videos_box_sort_by",
+        "default": "date"
+    },
+    {
+        "key": "vs_members_videos_box_sort_order",
+        "default": "desc"
+    },
+    {
+        "key": "vs_standard_thumbnail",
+        "default": "200,140"
+    },
+    {
+        "key": "vs_submit_video_url",
+        "default": "1"
+    },
+    {
+        "key": "vs_thumbnail_upload",
+        "default": "1"
+    },
+    {
+        "key": "vs_topic_author",
+        "default": "0"
+    },
+    {
+        "key": "vs_topic_forum",
+        "default": "0"
+    },
+    {
+        "key": "vs_topic_own",
+        "default": "1"
+    },
+    {
+        "key": "vs_topic_template",
+        "default": ""
+    },
+    {
+        "key": "vs_topic_title",
+        "default": ""
+    },
+    {
+        "key": "vs_video_upload",
+        "default": "0"
+    },
+    {
+        "key": "vs_video_upload_extensions",
+        "default": "mp4,flv,mov,m4v"
+    },
+    {
+        "key": "vs_video_upload_size",
+        "default": "10240"
+    }
+]

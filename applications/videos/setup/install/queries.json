@@ -1,0 +1,364 @@
+{
+    "1": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_add_video",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "2": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_edit_video",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "3": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_delete_video",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "4": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_rate_video",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "5": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_rate_video_change",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 1,
+                "unsigned": true
+            }
+        ]
+    },
+    "6": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_report_video",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 1,
+                "unsigned": true
+            }
+        ]
+    },
+    "7": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_embed_video",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "8": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_view_comments",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 1,
+                "unsigned": true
+            }
+        ]
+    },
+    "9": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_add_comments",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "10": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_edit_comments",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "11": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_delete_comments",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "12": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_comments_per_member",
+                "type": "INT",
+                "length": 5,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "13": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_m_edit_videos",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "14": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_m_delete_videos",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "15": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_m_edit_comments",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "16": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_m_delete_comments",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "17": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_m_manage",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 0,
+                "unsigned": true
+            }
+        ]
+    },
+    "18": {
+        "method": "insert",
+        "params": [
+            "core_sys_lang_words",
+            {
+                "lang_id": 1,
+                "word_app": "videos",
+                "word_key": "videos_category_1",
+                "word_default": "Videos",
+                "word_custom": "Videos",
+                "word_export": 0
+            }
+        ]
+    },
+    "19": {
+        "method": "insert",
+        "params": [
+            "core_permission_index",
+            {
+                "app": "videos",
+                "perm_type": "Cat",
+                "perm_type_id": 1,
+                "perm_view": "*",
+                "perm_2": "*",
+                "perm_3": "<%NO_GUESTS%>",
+                "perm_4": "<%NO_GUESTS%>",
+                "perm_5": ""
+            }
+        ]
+    },
+    "20": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "index",
+                "widgets": "[{\"app\":\"videos\",\"key\":\"videosVideos\",\"unique\":\"0tv1tcarj\",\"configuration\":[]},{\"app\":\"videos\",\"key\":\"videosComments\",\"unique\":\"hjhbqge28\",\"configuration\":[]}]",
+                "area": "sidebar"
+            }
+        ]
+    },
+    "21": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "index",
+                "widgets": "[{\"app\":\"videos\",\"key\":\"videosStats\",\"unique\":\"88ouyrggt\",\"configuration\":[]}]",
+                "area": "footer"
+            }
+        ]
+    },
+    "22": {
+        "method": "addColumn",
+        "params": [
+            "core_groups",
+            {
+                "name": "g_vs_view",
+                "type": "TINYINT",
+                "length": 1,
+                "null": false,
+                "default": 1,
+                "unsigned": true
+            }
+        ]
+    },
+    "23": {
+        "method": "insert",
+        "params": [
+            "core_sys_lang_words",
+            {
+                "lang_id": 1,
+                "word_app": "videos",
+                "word_key": "vs_topic_title_value",
+                "word_default": "Video Discussion: %TITLE%",
+                "word_custom": "Video Discussion: %TITLE%",
+                "word_export": 0
+            }
+        ]
+    },
+    "24": {
+        "method": "insert",
+        "params": [
+            "core_sys_lang_words",
+            {
+                "lang_id": 1,
+                "word_app": "videos",
+                "word_key": "vs_topic_template_value",
+                "word_default": "<p>%THUMBNAIL%<\/p><p><strong class=\"bbc\">Name:<\/strong> %TITLE%<br \/><strong class=\"bbc\">Category:<\/strong> %CATEGORY%<br \/><strong class=\"bbc\">Date Added:<\/strong> %DATE_ADDED%<br \/><strong class=\"bbc\">Submitter:<\/strong> %PROFILE_LINK%<\/p><p>%FULL_DESC%<br \/><br \/><strong class=\"bbc\">%VIDEO_LINK%<\/strong><\/p>",
+                "word_custom": "<p>%THUMBNAIL%<\/p><p><strong class=\"bbc\">Name:<\/strong> %TITLE%<br \/><strong class=\"bbc\">Category:<\/strong> %CATEGORY%<br \/><strong class=\"bbc\">Date Added:<\/strong> %DATE_ADDED%<br \/><strong class=\"bbc\">Submitter:<\/strong> %PROFILE_LINK%<\/p><p>%FULL_DESC%<br \/><br \/><strong class=\"bbc\">%VIDEO_LINK%<\/strong><\/p>",
+                "word_export": 0
+            }
+        ]
+    },
+    "25": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "browse",
+                "widgets": "[]",
+                "area": "sidebar"
+            }
+        ]
+    },
+    "26": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "view",
+                "widgets": "[]",
+                "area": "sidebar"
+            }
+        ]
+    }
+}

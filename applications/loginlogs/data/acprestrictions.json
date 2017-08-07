@@ -1,0 +1,10 @@
+{
+    "logs": {
+        "logs": {
+            "logs_manage": "logs_manage"
+        },
+        "settings": {
+            "settings_manage": "settings_manage"
+        }
+    }
+}

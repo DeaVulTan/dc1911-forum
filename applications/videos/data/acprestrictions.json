@@ -1,0 +1,16 @@
+{
+    "videos": {
+        "categories": {
+            "categories_manage": "categories_manage"
+        },
+        "settings": {
+            "settings_manage": "settings_manage"
+        },
+        "sites": {
+            "sites_manage": "sites_manage"
+        },
+        "permissions": {
+            "permissions_manage": "permissions_manage"
+        }
+    }
+}

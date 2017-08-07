@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="loginlogs" version="200000">
+  <word key="__app_loginlogs" js="0">Login Logs</word>
+  <word key="menu__loginlogs_logs" js="0">Login Logs</word>
+  <word key="menu__loginlogs_logs_logs" js="0">Logs</word>
+  <word key="menu__loginlogs_logs_settings" js="0">Settings</word>
+  <word key="llogs_photo" js="0">Photo</word>
+  <word key="llogs_member_id" js="0">Name</word>
+  <word key="llogs_name" js="0">Name</word>
+  <word key="llogs_email" js="0">Email</word>
+  <word key="llogs_login_time" js="0">Date</word>
+  <word key="llogs_ipaddress" js="0">IP Address</word>
+  <word key="llogs_is_successful" js="0">Result</word>
+  <word key="llogs_successful" js="0">Success</word>
+  <word key="llogs_failure" js="0">Failure</word>
+  <word key="llogs_result_successful" js="0"><![CDATA[<span style='font-weight:bold;'>Success</span>]]></word>
+  <word key="llogs_result_failure" js="0"><![CDATA[<span style='font-weight:bold;'>Failure</span>]]></word>
+  <word key="llogs_logpruning" js="0">Log Pruning</word>
+  <word key="llogs_days" js="0">Number of days of logs to keep</word>
+  <word key="llogs_days_desc" js="0">A task will run once daily to clean out all logs older than this many days.</word>
+  <word key="llogs_general" js="0">General Settings</word>
+  <word key="llogs_groups" js="0">Groups to log</word>
+  <word key="llogs_logtype" js="0">Login attempts to log</word>
+  <word key="llogs_logtype_desc" js="0"><![CDATA[<strong>Guests</strong>: Invalid login or users without an account trying to log in someone else's account.<br /><strong>Members</strong>: Registered users typing an invalid password.]]></word>
+  <word key="llogs_logtype_member" js="0">Members</word>
+  <word key="llogs_logtype_guest" js="0">Guests</word>
+  <word key="llogs_logtype_both" js="0">Both</word>
+  <word key="llogs_logpp" js="0">Logs per page</word>
+  <word key="llogs_groups_desc" js="0">Which groups login attempts do you wish to log?</word>
+  <word key="acplogs__loginlogs_settings" js="0">Updated Login Logs settings</word>
+  <word key="llogs_view_full_list" js="0">View Full List?</word>
+  <word key="task__loginLogs" js="0">Prunes the login log.</word>
+  <word key="r__logs" js="0">Logs</word>
+  <word key="r__logs_manage" js="0">View Logs</word>
+  <word key="llogs_attempt_num" js="0">Attempts</word>
+ </app>
+</language>

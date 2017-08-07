@@ -1,0 +1,6 @@
+{
+    "oembedsites": {
+        "type": "C",
+        "class": "\\IPS\\Text\\Parser"
+    }
+}

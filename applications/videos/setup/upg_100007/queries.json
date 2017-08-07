@@ -1,0 +1,70 @@
+{
+    "1": {
+        "method": "addIndex",
+        "params": [
+            "videos_cat",
+            {
+                "type": "key",
+                "name": "parent_id",
+                "columns": [
+                    "parent_id"
+                ],
+                "length": [
+                    null
+                ]
+            }
+        ]
+    },
+    "2": {
+        "method": "addIndex",
+        "params": [
+            "videos_cat",
+            {
+                "type": "key",
+                "name": "position",
+                "columns": [
+                    "parent_id",
+                    "position"
+                ],
+                "length": [
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    "3": {
+        "method": "addIndex",
+        "params": [
+            "videos_videos",
+            {
+                "type": "key",
+                "name": "cid",
+                "columns": [
+                    "cid",
+                    "last_updated"
+                ],
+                "length": [
+                    null,
+                    null
+                ]
+            }
+        ]
+    },
+    "4": {
+        "method": "addIndex",
+        "params": [
+            "videos_videos",
+            {
+                "type": "key",
+                "name": "featured",
+                "columns": [
+                    "featured"
+                ],
+                "length": [
+                    null
+                ]
+            }
+        ]
+    }
+}

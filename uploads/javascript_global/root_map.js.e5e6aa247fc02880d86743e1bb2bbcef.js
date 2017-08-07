@@ -1,0 +1,1 @@
+var ipsJavascriptMap={"core":{"global_core":"http://host3/uploads/javascript_core/global_global_core.js.a7f78dec78270719b2286642ecf5b0b1.js"}};;

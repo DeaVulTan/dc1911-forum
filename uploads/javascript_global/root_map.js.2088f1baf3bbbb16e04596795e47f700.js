@@ -1,0 +1,1 @@
+var ipsJavascriptMap={"core":{"global_core":"http://forum.diablo.uz/uploads/javascript_core/global_global_core.js.1c2185f878353a0276ac8c4af2a60ab4.js","admin_core":"http://forum.diablo.uz/uploads/javascript_core/admin_admin_core.js.0db8cf238ab491e58cd74b5cf84321ae.js"}};;

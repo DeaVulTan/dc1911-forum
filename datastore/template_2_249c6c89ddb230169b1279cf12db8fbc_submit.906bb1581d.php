@@ -1,0 +1,5 @@
+<?php
+
+return <<<'VALUE'
+"namespace IPS\\Theme;\nclass class_videos_front_submit extends \\IPS\\Theme\\Template\n{\n\t\t\tfunction categorySelect( $form ) {\n\t\t$return = '';\n\t\t$return .= <<<CONTENT\n\n\n\nCONTENT;\n\nif ( !\\IPS\\Request::i()->isAjax() ):\n$return .= <<<CONTENT\n\n\t\nCONTENT;\n\n$return .= \\IPS\\Theme::i()->getTemplate( \"global\", \"core\" )->pageHeader( \\IPS\\Member::loggedIn()->language()->addToStack('videos_select_category') );\n$return .= <<<CONTENT\n\n\nCONTENT;\n\nelse:\n$return .= <<<CONTENT\n\n\t<div class='ipsPad'>\n\nCONTENT;\n\nendif;\n$return .= <<<CONTENT\n\n\t{$form}\n\nCONTENT;\n\nif ( \\IPS\\Request::i()->isAjax() ):\n$return .= <<<CONTENT\n\n\t<\/div>\n\nCONTENT;\n\nendif;\n$return .= <<<CONTENT\n\nCONTENT;\n\n\t\treturn $return;\n}\n\n\tfunction formPage( $category, $form ) {\n\t\t$return = '';\n\t\t$return .= <<<CONTENT\n\n\nCONTENT;\n\n$return .= \\IPS\\Theme::i()->getTemplate( \"global\", \"core\" )->pageHeader( $category->_title );\n$return .= <<<CONTENT\n\n\n<div class='ipsBox ipsPad'>\n<div class='ipsType_normal ipsType_richText'>\n\t{$form}\n<\/div>\n<\/div>\nCONTENT;\n\n\t\treturn $return;\n}}"
+VALUE;

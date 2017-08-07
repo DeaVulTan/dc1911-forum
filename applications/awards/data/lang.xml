@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="awards" version="10005">
+  <word key="__app_awards" js="0">iAwards</word>
+  <word key="__child_awards" js="0">Awards</word>
+  <word key="menutab__awards" js="0">iAwards</word>
+  <word key="menu__awards_awards" js="0">Awards</word>
+  <word key="menu__awards_awards_settings" js="0"><![CDATA[&nbsp;&nbsp;Settings]]></word>
+  <word key="menu__awards_awards_manage" js="0"><![CDATA[&nbsp;&nbsp;Manage]]></word>
+  <word key="menutab__awards_icon" js="0">trophy</word>
+  <word key="menu__awards_awards_logs" js="0"><![CDATA[&nbsp;&nbsp;Logs]]></word>
+  <word key="menu__awards_awards_tools" js="0">Tools</word>
+  <word key="module__awards_awards" js="0">iAwards</word>
+  <word key="profile_awards_Awards" js="0">Awards</word>
+  <word key="menu__awards_upgrade" js="0">Upgrade</word>
+  <word key="menu__awards_upgrade_awards_system" js="0"><![CDATA[&nbsp;&nbsp;Awards System]]></word>
+  <word key="menu__awards_upgrade_hq_awards" js="0"><![CDATA[&nbsp;&nbsp;HQ Awards]]></word>
+  <word key="cat_enabled" js="0">Enabled ?</word>
+  <word key="cat_title" js="0">Title</word>
+  <word key="cat_header_main" js="0">Category Settings</word>
+  <word key="cat_tab_main" js="0">category</word>
+  <word key="cat_perm_perm__label" js="0">Category Permissions</word>
+  <word key="cat_perm_perm__view" js="0">View</word>
+  <word key="cat_perm_perm__add" js="0">Add Awards</word>
+  <word key="award_title" js="0">Title</word>
+  <word key="award_desc" js="0">Description</word>
+  <word key="award_icon" js="0">Icon</word>
+  <word key="award_enabled" js="0">Enabled ?</word>
+  <word key="award_show" js="0">Show where ?</word>
+  <word key="award_options" js="0">Options</word>
+  <word key="award_notification" js="0">Send notification</word>
+  <word key="award_manual" js="0">Manual</word>
+  <word key="award_amount" js="0">Awards amount</word>
+  <word key="award_cat_id" js="0">Category</word>
+  <word key="award_id" js="0">Award</word>
+  <word key="award_when" js="0">When ?</word>
+  <word key="award_reason" js="0">Reason</word>
+  <word key="award_tab_main" js="0">Main</word>
+  <word key="award_tab_options" js="0">Options</word>
+  <word key="award_tab_notification" js="0">Notifications</word>
+  <word key="award_restrictions" js="0">Multiple awards</word>
+  <word key="award_restrictions_desc" js="0">Restrict members to receive this award more than once ?</word>
+  <word key="award_perm_perm__label" js="0">Award Permissions</word>
+  <word key="award_perm_perm__view" js="0">View Award</word>
+  <word key="award_perm_perm__add" js="0">Award Member</word>
+  <word key="award_perm_perm__receive" js="0">Receive Award</word>
+  <word key="award_perm_perm__self" js="0">Self Award</word>
+  <word key="award_perm_perm__restrict" js="0">Multi Award</word>
+  <word key="award_perm_perm__manage" js="0">Edit/Remove</word>
+  <word key="award_self" js="0">Self award</word>
+  <word key="award_self_desc" js="0">Restrict members to award themselves ?</word>
+  <word key="award_tab_reason" js="0">Reason</word>
+  <word key="award_replace" js="0">Replace award ?</word>
+  <word key="award_award_with" js="0">Award</word>
+  <word key="award_award_with_desc" js="0">Select the award you will be replacing.</word>
+  <word key="award_obtainable_enabled" js="0">Enable limited edition ?</word>
+  <word key="award_obtainable" js="0">Still available ?</word>
+  <word key="award_obtainable_yes_message" js="0">Available message</word>
+  <word key="award_obtainable_no_message" js="0">Not available message</word>
+  <word key="awarded_member" js="0">Member</word>
+  <word key="awarded_photo" js="0"><![CDATA[&nbsp;]]></word>
+  <word key="awarded_name" js="0">Member</word>
+  <word key="awarded_date" js="0">Date</word>
+  <word key="awarded_manage_members" js="0">Manage Awarded </word>
+  <word key="awarded_removed" js="0">Award successfully removed.</word>
+  <word key="awarded_added" js="0">Award successfully added.</word>
+  <word key="awarded_reason" js="0">Reason</word>
+  <word key="awarded_updated" js="0">Member successfully updated</word>
+  <word key="award_removed_reason" js="0">Reason</word>
+  <word key="award_removed_photo" js="0"><![CDATA[&nbsp;]]></word>
+  <word key="award_removed_name" js="0">Member</word>
+  <word key="award_removed_title" js="0">Award</word>
+  <word key="award_removed_awarded_date" js="0">Awarded Date</word>
+  <word key="award_removed_date" js="0">Removed Date</word>
+  <word key="award_removed_by" js="0">Removed By</word>
+  <word key="award_member_restore" js="0">Restore</word>
+  <word key="award_restored_photo" js="0"><![CDATA[&nbsp;]]></word>
+  <word key="award_restored_name" js="0">Member</word>
+  <word key="award_restored_title" js="0">Award</word>
+  <word key="award_restored_awarded_date" js="0">Awarded Date</word>
+  <word key="award_restored_by" js="0">Restored By</word>
+  <word key="award_restored_date" js="0">Restored Date</word>
+  <word key="awarded_restored" js="0">Award successfully restored.</word>
+  <word key="award_restored_reason" js="0">Reason</word>
+  <word key="award_title_add_award" js="0">Add Award</word>
+  <word key="award_title_manage" js="0">Manage Awarded - %s</word>
+  <word key="award_title_settings" js="0">Settings</word>
+  <word key="award_title_remove" js="0">Remove Award</word>
+  <word key="award_title_logs" js="0">Logs</word>
+  <word key="award_title_restore" js="0">Restore</word>
+  <word key="award_title_tools" js="0">Tools</word>
+  <word key="award_title_edit_awarded" js="0">Edit Awarded</word>
+  <word key="award_settings_header_main" js="0">Main Settings</word>
+  <word key="award_settings_header_options" js="0">Options</word>
+  <word key="award_settings_all_user_groups" js="0">All groups</word>
+  <word key="award_settings_enable" js="0">Enable this app ?</word>
+  <word key="award_settings_view" js="0">View permissions</word>
+  <word key="award_settings_manage" js="0">Manage permissions from the +create menu</word>
+  <word key="award_settings_show" js="0">Show where ?</word>
+  <word key="award_settings_total" js="0">Total awards to show</word>
+  <word key="award_settings_bot" js="0">Notification bot account</word>
+  <word key="award_settings_hovercard" js="0">Hovercard</word>
+  <word key="award_settings_tooltips" js="0">Tooltip</word>
+  <word key="award_settings_style" js="0">Style</word>
+  <word key="award_settings_pane" js="0">Awards</word>
+  <word key="award_settings_inside_posts" js="0">Achievements</word>
+  <word key="awards_settings_show_awards" js="0">Awards</word>
+  <word key="awards_settings_show_achievements" js="0">Achievements</word>
+  <word key="award_settings_tab_main" js="0">Main</word>
+  <word key="award_settings_header_display_profile" js="0">Profile Display Settings</word>
+  <word key="award_settings_tab_display" js="0">Display</word>
+  <word key="award_settings_header_permissions" js="0">Permissions Settings</word>
+  <word key="award_settings_tab_permissions" js="0">Permissions</word>
+  <word key="award_settings_profile_size" js="0">Icon size</word>
+  <word key="award_settings_header_display_pane" js="0">Pane Display Settings</word>
+  <word key="award_settings_pane_size" js="0">Icon size</word>
+  <word key="award_settings_pane_display" js="0">What to display ?</word>
+  <word key="award_settings_pane_total" js="0">Total awards to show</word>
+  <word key="award_settings_pane_style" js="0">Style</word>
+  <word key="award_settings_header_display_posts" js="0">Posts Display Settings</word>
+  <word key="award_settings_posts_display" js="0">What to display ?</word>
+  <word key="award_settings_posts_total" js="0">Total awards to show</word>
+  <word key="award_settings_posts_style" js="0">Style</word>
+  <word key="award_settings_posts_size" js="0">Icon size</word>
+  <word key="award_settings_header_display_hover" js="0">Members Hovercard Display Settings</word>
+  <word key="award_settings_hover_display" js="0">What to show ?</word>
+  <word key="award_settings_hover_total" js="0">Total awards to show</word>
+  <word key="award_settings_hover_style" js="0">Style</word>
+  <word key="award_settings_hover_size" js="0">Icon size</word>
+  <word key="award_settings_header_display_front" js="0">Front End Display Settings</word>
+  <word key="award_settings_front_size" js="0">Icon size</word>
+  <word key="award_settings_header_display_awardhover" js="0">Award Hovercard Display Settings</word>
+  <word key="award_settings_awardhover_size" js="0">Icon size</word>
+  <word key="award_settings_pane_enable" js="0">Enable ?</word>
+  <word key="award_settings_posts_enable" js="0">Enable ?</word>
+  <word key="award_settings_hover_enable" js="0">Enable ?</word>
+  <word key="award_settings_pane_cat_show_show" js="0">What to show ?</word>
+  <word key="award_settings_cat_show_all" js="0">All awards</word>
+  <word key="award_settings_cat_show_cat" js="0">From categories</word>
+  <word key="award_settings_pane_cat" js="0">Categories</word>
+  <word key="award_settings_pane_title" js="0">Title</word>
+  <word key="award_settings_posts_cat_show_show" js="0">What to show ?</word>
+  <word key="award_settings_posts_title" js="0">Title</word>
+  <word key="award_settings_posts_cat" js="0">Categories</word>
+  <word key="award_settings_hover_cat_show_show" js="0">What to show ?</word>
+  <word key="award_settings_hover_title" js="0">Title</word>
+  <word key="award_settings_hover_cat" js="0">Categories</word>
+  <word key="award_settings_pane_alignment" js="0">Alignment</word>
+  <word key="awards_alignment_center" js="0">Center</word>
+  <word key="awards_alignment_left" js="0">Left</word>
+  <word key="awards_alignment_right" js="0">Right</word>
+  <word key="award_settings_posts_alignment" js="0">Alignment</word>
+  <word key="award_settings_hover_alignment" js="0">Alignment</word>
+  <word key="award_member" js="0">Award Member</word>
+  <word key="award_member_delete" js="0">Remove</word>
+  <word key="award_member_edit" js="0">Edit</word>
+  <word key="award_add" js="0">Award Member</word>
+  <word key="award_view_reason" js="0">Reason</word>
+  <word key="award_no_rows_in_table" js="0">There's nothing here yet.</word>
+  <word key="award_awarded" js="0">Awarded</word>
+  <word key="award_my_awards" js="0">%s's Awards</word>
+  <word key="award_awarded_awarded" js="0">Members Awarded - %s</word>
+  <word key="award_awards" js="0">Awards</word>
+  <word key="award_as_not_installed" js="0">Award System is not installed.</word>
+  <word key="award_as_upgraded" js="0">Award System is already upgraded.</word>
+  <word key="award_title_default" js="0">You have received a new award: %s</word>
+  <word key="mailsub__awards_notification_award_member" js="0">You have received a new award.</word>
+  <word key="award_reason_default" js="0"><![CDATA[You have earned a new award <a href='%s'>%s</a><p>Reason: %s</p><p>Congratulations on you're new award and keep being awesome! </p><p>Regards, </p><p>%s Staff</p>]]></word>
+  <word key="notifications__awards_Awards" js="0">iAwards</word>
+  <word key="notifications__award_member" js="0">When i receive a new award.</word>
+  <word key="iAwards_add_child" js="0">Add Award</word>
+  <word key="award_mass_donated" js="0">Mass awarded successfully.</word>
+  <word key="award_groups" js="0">Group</word>
+  <word key="award_massDonate" js="0">Mass Donate</word>
+  <word key="award_massRemove" js="0">Mass Remove</word>
+  <word key="award_complete_massRemove" js="0">Complete Mass Remove</word>
+  <word key="award_awarding_members" js="0">Awarding Members</word>
+  <word key="award_err_group_perm" js="0">You do not have permissions to access iAwards.</word>
+  <word key="award_err_offline" js="0">This system is offline.</word>
+  <word key="award_achievements" js="0">Achievements</word>
+  <word key="awards_member_date" js="0">Date</word>
+  <word key="awards_member_cat" js="0">Category</word>
+  <word key="awards_member_title" js="0">Title</word>
+  <word key="award_sort" js="0">Sort By</word>
+  <word key="award_order" js="0">Sort Direction</word>
+  <word key="awards_member_desc" js="0">Descending (newest first)</word>
+  <word key="awards_member_asc" js="0">Ascending (oldest first)</word>
+  <word key="as" js="0">Awards System</word>
+  <word key="awards_as_upgraded" js="0">Awards System is already upgraded.</word>
+  <word key="awards_as_not_installed" js="0">Awards System is not installed.</word>
+  <word key="awards_as_upgraded_msg" js="0">Awards System successfully upgraded.</word>
+  <word key="awards_as_upgrade" js="0">Upgrade to iAwards</word>
+  <word key="awards_as_upgrade_desc" js="0"><![CDATA[<span style='color: red;'>Having to many rows can cause resource issues.</span>]]></word>
+  <word key="awards_hq_upgrade" js="0">Upgrade to iAwards</word>
+  <word key="awards_hq_upgrade_desc" js="0"><![CDATA[<span style='color: red;'>Having to many rows can cause resource issues.</span>]]></word>
+  <word key="hq" js="0">HQ Awards</word>
+  <word key="awards_hq_upgraded" js="0">HQ Awards is already upgraded.</word>
+  <word key="awards_hq_not_installed" js="0">HQ Awards is not installed.</word>
+  <word key="awards_hq_upgraded_msg" js="0">HQ Awards successfully upgraded.</word>
+  <word key="awards_no_cats" js="0">Nothing to import.</word>
+  <word key="top_awarded_empty__week" js="0">Nobody has has been awarded this week.</word>
+  <word key="top_awarded_empty__month" js="0">Nobody has has been awarded this month.</word>
+  <word key="top_awarded_empty__year" js="0">Nobody has has been awarded this year.</word>
+  <word key="top_awarded_empty__all" js="0">Nobody has has been awarded yet.</word>
+  <word key="block_topAwarded" js="0">Top Awarded</word>
+  <word key="block_topAwarded_desc" js="0">List of top members awarded.</word>
+  <word key="block_latestAwarded" js="0">Latest Awarded</word>
+  <word key="block_latestAwarded_desc" js="0">List of latest members awarded.</word>
+  <word key="latest_awarded_to_show" js="0">Total to show ?</word>
+  <word key="awarded_number_to_show" js="0">Total to show ?</word>
+  <word key="no_latest_awarded" js="0">No member has been awarded yet.</word>
+  <word key="awards_jawards" js="0">Image folder</word>
+  <word key="awards_jawards_desc" js="0">Select where the HQ Awards image folder is located.</word>
+  <word key="awards_awards_system" js="0">Image folder</word>
+  <word key="awards_awards_system_desc" js="0">Select where the Awards System image folder is located.</word>
+  <word key="award_already_awarded" js="0">Member already awarded.</word>
+  <word key="award_member_show" js="0">Exclude awards</word>
+  <word key="awards_member_award" js="0">Award</word>
+  <word key="removed_deleted" js="0">Log successfully deleted.</word>
+  <word key="award_member_delete_log" js="0">Delete Log</word>
+  <word key="awards_obtainable_err" js="0">Sorry to be able to award you must disable the limited edition still available option.</word>
+  <word key="awards_self_err" js="0">You can not award yourself.</word>
+  <word key="awards_Awards_conditions_has_award" js="0">Check if member has a certain award</word>
+  <word key="awards_Awards_conditions_has_award_member" js="0">Member To Check</word>
+  <word key="awards_Awards_conditions_has_award_award" js="0">Award To Check For</word>
+  <word key="awards_Awards_actions_give_award" js="0">Give an award to a member</word>
+  <word key="awards_Awards_actions_give_award_member" js="0">Give Award To Member</word>
+  <word key="awards_Awards_actions_give_award_award" js="0">Award To Give</word>
+  <word key="awards_Awards_actions_give_award_giver" js="0">Member Giving Award</word>
+  <word key="awards_choose_award" js="0">Choose an award</word>
+  <word key="awards_respect_permissions" js="0">Respect award permissions</word>
+  <word key="awards_respect_permissions_desc" js="0">Only give award to member if they have permission to receive it.</word>
+  <word key="awards_Awards_actions_remove_award" js="0">Remove award from member</word>
+  <word key="awards_Awards_actions_remove_award_member" js="0">Member To Remove Award From</word>
+  <word key="awards_Awards_actions_remove_award_award" js="0">Award To Remove</word>
+  <word key="awards_Awards_actions_remove_award_remover" js="0">Award Remover</word>
+  <word key="awards_Awards_actions_remove_award_reason" js="0">Removal Reason</word>
+  <word key="iawards_rules_remove_message" js="0">Message</word>
+ </app>
+</language>

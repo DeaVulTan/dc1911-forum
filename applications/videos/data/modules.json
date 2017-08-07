@@ -1,0 +1,14 @@
+{
+    "admin": {
+        "videos": {
+            "default_controller": "categories",
+            "protected": 0
+        }
+    },
+    "front": {
+        "videos": {
+            "default_controller": "index",
+            "protected": 0
+        }
+    }
+}

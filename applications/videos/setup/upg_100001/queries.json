@@ -1,0 +1,202 @@
+{
+    "1": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "index",
+                "widgets": "[{\"app\":\"videos\",\"key\":\"videosVideos\",\"unique\":\"0tv1tcarj\",\"configuration\":[]},{\"app\":\"videos\",\"key\":\"videosComments\",\"unique\":\"hjhbqge28\",\"configuration\":[]}]",
+                "area": "sidebar"
+            }
+        ]
+    },
+    "2": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "index",
+                "widgets": "[{\"app\":\"videos\",\"key\":\"videosStats\",\"unique\":\"88ouyrggt\",\"configuration\":[]}]",
+                "area": "footer"
+            }
+        ]
+    },
+    "3": {
+        "method": "dropTable",
+        "params": [
+            "videos_thumbnail_sites",
+            true
+        ]
+    },
+    "4": {
+        "method": "dropTable",
+        "params": [
+            "videos_favorites",
+            true
+        ]
+    },
+    "5": {
+        "method": "createTable",
+        "params": [
+            {
+                "name": "videos_sites",
+                "columns": {
+                    "site_id": {
+                        "allow_null": false,
+                        "auto_increment": true,
+                        "binary": false,
+                        "comment": "",
+                        "decimals": null,
+                        "default": null,
+                        "length": 10,
+                        "name": "site_id",
+                        "type": "INT",
+                        "unsigned": true,
+                        "values": [],
+                        "zerofill": false
+                    },
+                    "site_name": {
+                        "allow_null": true,
+                        "auto_increment": false,
+                        "binary": false,
+                        "comment": "",
+                        "decimals": null,
+                        "default": null,
+                        "length": 255,
+                        "name": "site_name",
+                        "type": "VARCHAR",
+                        "unsigned": false,
+                        "values": [],
+                        "zerofill": false
+                    },
+                    "site_enabled": {
+                        "allow_null": true,
+                        "auto_increment": false,
+                        "binary": false,
+                        "comment": "",
+                        "decimals": null,
+                        "default": "0",
+                        "length": 1,
+                        "name": "site_enabled",
+                        "type": "TINYINT",
+                        "unsigned": false,
+                        "values": [],
+                        "zerofill": false
+                    },
+                    "site_host": {
+                        "allow_null": true,
+                        "auto_increment": false,
+                        "binary": false,
+                        "comment": "",
+                        "decimals": null,
+                        "default": null,
+                        "length": 255,
+                        "name": "site_host",
+                        "type": "VARCHAR",
+                        "unsigned": false,
+                        "values": [],
+                        "zerofill": false
+                    },
+                    "site_url": {
+                        "allow_null": true,
+                        "auto_increment": false,
+                        "binary": false,
+                        "comment": "",
+                        "decimals": null,
+                        "default": null,
+                        "length": 255,
+                        "name": "site_url",
+                        "type": "VARCHAR",
+                        "unsigned": false,
+                        "values": [],
+                        "zerofill": false
+                    },
+                    "site_oembed": {
+                        "allow_null": true,
+                        "auto_increment": false,
+                        "binary": false,
+                        "comment": "",
+                        "decimals": null,
+                        "default": null,
+                        "length": 255,
+                        "name": "site_oembed",
+                        "type": "VARCHAR",
+                        "unsigned": false,
+                        "values": [],
+                        "zerofill": false
+                    }
+                },
+                "indexes": {
+                    "PRIMARY": {
+                        "type": "primary",
+                        "name": "PRIMARY",
+                        "length": [
+                            null
+                        ],
+                        "columns": [
+                            "site_id"
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "6": {
+        "method": "insert",
+        "params": [
+            "videos_sites",
+            {
+                "site_name": "Ustream Channel",
+                "site_enabled": 1,
+                "site_host": "ustream.tv",
+                "site_url": "http:\/\/www.ustream.tv\/channel\/americatv2oficial",
+                "site_oembed": "http:\/\/www.ustream.tv\/oembed"
+            }
+        ]
+    },
+    "7": {
+        "method": "insert",
+        "params": [
+            "core_sys_lang_words",
+            {
+                "lang_id": 1,
+                "word_app": "videos",
+                "word_key": "vs_topic_title_value",
+                "word_default": "Video Discussion: %TITLE%",
+                "word_custom": "Video Discussion: %TITLE%",
+                "word_export": 0
+            }
+        ]
+    },
+    "8": {
+        "method": "insert",
+        "params": [
+            "core_sys_lang_words",
+            {
+                "lang_id": 1,
+                "word_app": "videos",
+                "word_key": "vs_topic_template_value",
+                "word_default": "<p>%THUMBNAIL%<\/p><p><strong class=\"bbc\">Name:<\/strong> %TITLE%<br \/><strong class=\"bbc\">Category:<\/strong> %CATEGORY%<br \/><strong class=\"bbc\">Date Added:<\/strong> %DATE_ADDED%<br \/><strong class=\"bbc\">Submitter:<\/strong> %PROFILE_LINK%<\/p><p>%FULL_DESC%<br \/><br \/><strong class=\"bbc\">%VIDEO_LINK%<\/strong><\/p>",
+                "word_custom": "<p>%THUMBNAIL%<\/p><p><strong class=\"bbc\">Name:<\/strong> %TITLE%<br \/><strong class=\"bbc\">Category:<\/strong> %CATEGORY%<br \/><strong class=\"bbc\">Date Added:<\/strong> %DATE_ADDED%<br \/><strong class=\"bbc\">Submitter:<\/strong> %PROFILE_LINK%<\/p><p>%FULL_DESC%<br \/><br \/><strong class=\"bbc\">%VIDEO_LINK%<\/strong><\/p>",
+                "word_export": 0
+            }
+        ]
+    },
+    "9": {
+        "method": "insert",
+        "params": [
+            "core_widget_areas",
+            {
+                "app": "videos",
+                "module": "videos",
+                "controller": "browse",
+                "widgets": "[]",
+                "area": "sidebar"
+            }
+        ]
+    }
+}

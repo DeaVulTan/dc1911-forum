@@ -1,0 +1,8 @@
+{
+    "admin": {
+        "logs": {
+            "default_controller": "",
+            "protected": false
+        }
+    }
+}

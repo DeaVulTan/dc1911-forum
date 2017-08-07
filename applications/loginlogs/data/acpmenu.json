@@ -1,0 +1,16 @@
+{
+    "logs": {
+        "logs": {
+            "tab": "members",
+            "controller": "logs",
+            "do": "",
+            "restriction": "logs_manage"
+        },
+        "settings": {
+            "tab": "members",
+            "controller": "settings",
+            "do": "",
+            "restriction": "settings_manage"
+        }
+    }
+}

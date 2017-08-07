@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme name="Стандартный" easy_mode="0" editor_skin="ips" author_name="Invision Power Services" author_url="http://www.invisionpower.com" version="" long_version="101040" update_check="">
+ <app key="core" version="101040">
+  <template template_group="global" template_name="globalTemplate" template_data="$title,$html,$location=array()" template_location="front"><![CDATA[<!DOCTYPE html>
+<html lang="{expression="\IPS\Member::loggedIn()->language()->bcp47()"}" dir="{{if member.language()->isrtl}}rtl{{else}}ltr{{endif}}">
+	<head>
+		<title>{expression="output.getTitle( $title )"}</title>
+		<!--[if lt IE 9]>
+			{{foreach \IPS\Theme::i()->css( 'extra/ie8.css', 'core' ) as $css}}<link rel="stylesheet" type="text/css" href="{$css}">{{endforeach}}
+		    <script src="{url="applications/core/interface/html5shiv/html5shiv.js" base="none" protocol="\IPS\Http\Url::PROTOCOL_RELATIVE"}"></script>
+		<![endif]-->
+		{template="includeMeta" app="core" group="global" location="global" params=""}
+		{template="includeCSS" app="core" group="global" location="global" params=""}
+		{template="includeJS" if="theme.js_include != 'footer'" app="core" group="global" location="global" params=""}
+		{template="favico" app="core" group="global" location="front" params=""}
+	</head>
+	<body class='ipsApp ipsApp_front {{if isset( \IPS\Request::i()->cookie['hasJS'] )}}ipsJS_has{{else}}ipsJS_none{{endif}} ipsClearfix{{foreach output.bodyClasses as $class}} {$class}{{endforeach}}' {{if output.globalControllers}}data-controller='{expression="implode( ',', output.globalControllers )"}'{{endif}} {{if isset( output.inlineMessage )}}data-message="{expression="output.inlineMessage"}"{{endif}} data-pageApp='{$location['app']}' data-pageLocation='front' data-pageModule='{$location['module']}' data-pageController='{$location['controller']}' itemscope itemtype="http://schema.org/WebSite">
+		<meta itemprop="url" content="{setting="base_url"}">
+		<a href='#elContent' class='ipsHide' title='{lang="jump_to_content_desc"}' accesskey='m'>{lang="jump_to_content"}</a>
+		{template="offlineMessage" if="!settings.site_online && \IPS\Member::loggedIn()->group['g_access_offline']" app="core" group="global" params=""}
+		<div id='ipsLayout_header' class='ipsClearfix'>
+			{template="updateWarning" app="core" group="global" params=""}
+			{template="lkeyWarning" app="core" group="global" location="global" params=""}
+			{{if !in_array('ipsLayout_minimal', \IPS\Output::i()->bodyClasses )}}{template="mobileNavBar" app="core" group="global" params=""}{{endif}}
+			<header>
+				<div class='ipsLayout_container'>
+					{template="logo" app="core" group="global" params=""}
+					{{if !in_array('ipsLayout_minimal', \IPS\Output::i()->bodyClasses )}}{template="userBar" app="core" group="global" params=""}{{endif}}
+				</div>
+			</header>
+			{template="navBar" app="core" group="global" params=""}
+		</div>
+		<main role='main' id='ipsLayout_body' class='ipsLayout_container'>
+			<div id='ipsLayout_contentArea'>
+				<div id='ipsLayout_contentWrapper'>
+					{template="breadcrumb" app="core" group="global" params="true, 'top'"}
+					{template="sidebar" if="theme.sidebar_position == 'left'" app="core" group="global" params="'left'"}
+					<div id='ipsLayout_mainArea'>
+						<a id='elContent'></a>
+						{advertisement="ad_global_header"}
+						{template="acknowledgeWarning" if="\IPS\Member::loggedIn()->members_bitoptions['unacknowledged_warnings']" params="\IPS\Member::loggedIn()->warnings( 1, FALSE )" group="global" app="core"}
+						{template="widgetContainer" group="global" app="core" params="'header', 'horizontal'"}
+						{$html|raw}
+						{template="widgetContainer" group="global" app="core" params="'footer', 'horizontal'"}
+					</div>
+					{template="sidebar" if="theme.sidebar_position == 'right'" app="core" group="global" params="'right'"}
+					{template="breadcrumb" app="core" group="global" params="false, 'bottom'"}
+				</div>
+			</div>
+			{template="inlineMessage" if="member.msg_show_notification and $conversation = \IPS\core\Messenger\Conversation::latestUnreadConversation()" app="core" group="global" params="$conversation->comments( 1, 0, 'date', 'desc' )"}
+		</main>
+		<footer id='ipsLayout_footer' class='ipsClearfix'>
+			<div class='ipsLayout_container'>
+				{advertisement="ad_global_footer"}
+				{template="footer" app="core" group="global" params=""}
+			</div>
+		</footer>
+		{{if !in_array('ipsLayout_minimal', \IPS\Output::i()->bodyClasses )}}{template="mobileNavigation" if="theme.responsive" app="core" group="global" params=""}{{endif}}
+		{template="includeJS" if="theme.js_include == 'footer'" app="core" group="global" location="global" params=""}
+		{{if settings.ipbseo_ga_enabled}}
+			{setting="ipseo_ga"}
+		{{endif}}
+		{template="viglink" if="settings.viglink_enabled" app="core" group="global" params=""}
+		{template="metaTagEditor" if="isset( $_SESSION['live_meta_tags'] ) and $_SESSION['live_meta_tags'] and member.isAdmin()" app="core" group="global" params=""}
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		{expression="output.endBodyCode" raw="true"}
+	</body>
+</html>]]></template>
+  <field sc_key="ajax_pagination" sc_type="YesNo" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="1" sc_tab_key="custom" sc_show_in_vse="1" sc_title="themesetting_ajax_pagination" sc_order="9" sc_condition="">1</field>
+  <field sc_key="alternate_button" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#2d4760" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_alternate_button" sc_order="3" sc_condition="">#2d4760</field>
+  <field sc_key="alternate_button_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_alternate_button_font" sc_order="4" sc_condition="">#ffffff</field>
+  <field sc_key="area_background" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ebebeb" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_area_background" sc_order="10" sc_condition="">#ebebeb</field>
+  <field sc_key="area_background_dark" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#283a4a" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_area_background_dark" sc_order="11" sc_condition="">#283a4a</field>
+  <field sc_key="area_background_light" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#f5f5f5" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_area_background_light" sc_order="12" sc_condition="">#f5f5f5</field>
+  <field sc_key="area_background_reset" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_area_background_reset" sc_order="13" sc_condition="">#ffffff</field>
+  <field sc_key="button_bar" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#3c6994" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_button_bar" sc_order="13" sc_condition="">#3c6994</field>
+  <field sc_key="enable_fluid_width" sc_type="YesNo" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="0" sc_tab_key="custom" sc_show_in_vse="1" sc_title="themesetting_enable_fluid_width" sc_order="6" sc_condition="">0</field>
+  <field sc_key="fluid_width_size" sc_type="Number" sc_multiple="0" sc_content="[]" sc_default="95" sc_tab_key="custom" sc_show_in_vse="1" sc_title="themesetting_fluid_width_size" sc_order="7" sc_condition="">95</field>
+  <field sc_key="footer_text" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#333333" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_footer_text" sc_order="9" sc_condition="">#333333</field>
+  <field sc_key="header" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#3c6994" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_header" sc_order="2" sc_condition="">#3c6994</field>
+  <field sc_key="important_button" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#37848b" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_important_button" sc_order="7" sc_condition="">#37848b</field>
+  <field sc_key="important_button_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_important_button_font" sc_order="8" sc_condition="">#ffffff</field>
+  <field sc_key="item_status" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#3c6994" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_item_status_active" sc_order="24" sc_condition="">#3c6994</field>
+  <field sc_key="js_include" sc_type="Radio" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;head&quot;,&quot;value&quot;:&quot;Inside the &amp;lt;head&amp;gt;&quot;},{&quot;key&quot;:&quot;footer&quot;,&quot;value&quot;:&quot;Just before &amp;lt;\/body&amp;gt; tag&quot;}]" sc_default="head" sc_tab_key="custom" sc_show_in_vse="0" sc_title="themesetting_js_location" sc_order="8" sc_condition="">head</field>
+  <field sc_key="light_button" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#e5e5e5" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_light_button" sc_order="9" sc_condition="">#e5e5e5</field>
+  <field sc_key="light_button_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#333333" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_light_button_font" sc_order="10" sc_condition="">#333333</field>
+  <field sc_key="link" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#3c6994" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_link" sc_order="3" sc_condition="">#3c6994</field>
+  <field sc_key="link_hover" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ad1457" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_link_hover" sc_order="4" sc_condition="">#ad1457</field>
+  <field sc_key="main_nav" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#304d66" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_main_nav" sc_order="3" sc_condition="">#304d66</field>
+  <field sc_key="main_nav_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_main_nav_font" sc_order="4" sc_condition="">#ffffff</field>
+  <field sc_key="main_nav_tab" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#f5f5f5" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_main_nav_active" sc_order="5" sc_condition="">#f5f5f5</field>
+  <field sc_key="main_nav_tab_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#333333" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_main_nav_active_font" sc_order="6" sc_condition="">#333333</field>
+  <field sc_key="mentions" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#3084c4" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_mentions" sc_order="26" sc_condition="">#3084c4</field>
+  <field sc_key="moderated" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#f7edf1" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_moderated" sc_order="15" sc_condition="">#f7edf1</field>
+  <field sc_key="moderated_light" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#fcf7f9" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_moderated_light" sc_order="16" sc_condition="">#fcf7f9</field>
+  <field sc_key="moderated_text" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#880e4f" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_moderated_text" sc_order="17" sc_condition="">#880e4f</field>
+  <field sc_key="moderated_text_light" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#a4768f" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_moderated_text_light" sc_order="18" sc_condition="">#a4768f</field>
+  <field sc_key="normal_button" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#417ba3" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_normal_button" sc_order="5" sc_condition="">#417ba3</field>
+  <field sc_key="normal_button_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_normal_button_font" sc_order="6" sc_condition="">#ffffff</field>
+  <field sc_key="notification_bubble" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#ad1457" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_notification_bubble" sc_order="25" sc_condition="">#ad1457</field>
+  <field sc_key="page_background" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ebeef2" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_page_background" sc_order="1" sc_condition="">#ebeef2</field>
+  <field sc_key="poll_bar" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#2a94de" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_poll_bar" sc_order="19" sc_condition="">#2a94de</field>
+  <field sc_key="post_highlight" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#FCF9F0" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_post_highlight" sc_order="28" sc_condition="">#fcf9f0</field>
+  <field sc_key="post_highlight_border" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#F7DF97" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesettings_post_highlight_border" sc_order="29" sc_condition="">#f7df97</field>
+  <field sc_key="prefix" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ad1457" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_prefix" sc_order="8" sc_condition="">#ad1457</field>
+  <field sc_key="price" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#c62828" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_price" sc_order="10" sc_condition="">#c62828</field>
+  <field sc_key="primary_button" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#37474f" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_primary_button" sc_order="1" sc_condition="">#37474f</field>
+  <field sc_key="primary_button_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_primary_button_font" sc_order="2" sc_condition="">#ffffff</field>
+  <field sc_key="profile_header" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#262e33" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_profile_header" sc_order="7" sc_condition="">#262e33</field>
+  <field sc_key="rating_hover" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#2a94de" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_rating_hover" sc_order="20" sc_condition="">#2a94de</field>
+  <field sc_key="rating_on" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ff9800" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_rating_on" sc_order="21" sc_condition="">#ff9800</field>
+  <field sc_key="recaptcha_theme" sc_type="other" sc_multiple="0" sc_content="return new \IPS\Helpers\Form\Radio( &quot;core_theme_setting_title_{$row['sc_id']}&quot;, $value, FALSE, array( 'options' =&gt; array(&#13;&#10;&#9;&#9;&#9;'clean'&#9;&#9;&#9;=&gt; &quot;&lt;img src='&quot; . $theme-&gt;resource( 'recaptcha/clean.png', 'core' ) . &quot;' alt='clean'&gt;&quot;,&#13;&#10;&#9;&#9;&#9;'red'&#9;&#9;&#9;=&gt; &quot;&lt;img src='&quot; . $theme-&gt;resource( 'recaptcha/red.png', 'core' ) . &quot;' alt='clean'&gt;&quot;,&#13;&#10;&#9;&#9;&#9;'white'&#9;&#9;&#9;=&gt; &quot;&lt;img src='&quot; . $theme-&gt;resource( 'recaptcha/white.png', 'core' ) . &quot;' alt='clean'&gt;&quot;,&#13;&#10;&#9;&#9;&#9;'blackglass'&#9;=&gt; &quot;&lt;img src='&quot; . $theme-&gt;resource( 'recaptcha/blackglass.png', 'core' ) . &quot;' alt='clean'&gt;&quot;,&#13;&#10;&#9;&#9;&#9;), 'parse' =&gt; 'raw' ), NULL, NULL, NULL, 'theme_setting_' . $row['sc_key'] );" sc_default="white" sc_tab_key="custom" sc_show_in_vse="0" sc_title="recaptcha_theme" sc_order="12" sc_condition="return \IPS\Settings::i()-&gt;bot_antispam_type === 'recaptcha';"/>
+  <field sc_key="recaptcha2_theme" sc_type="other" sc_multiple="0" sc_content="return new \IPS\Helpers\Form\Radio( &quot;core_theme_setting_title_{$row['sc_id']}&quot;, $value, FALSE, array( 'options' =&gt; array(&#13;&#10;&#9;&#9;&#9;'light'&#9;&#9;&#9;=&gt; &quot;&lt;img src='&quot; . $theme-&gt;resource( 'recaptcha2/light.png', 'core' ) . &quot;' alt='light'&gt;&quot;,&#13;&#10;&#9;&#9;&#9;'dark'&#9;&#9;&#9;=&gt; &quot;&lt;img src='&quot; . $theme-&gt;resource( 'recaptcha2/dark.png', 'core' ) . &quot;' alt='dark'&gt;&quot;,&#13;&#10;&#9;&#9;&#9;), 'parse' =&gt; 'raw' ), NULL, NULL, NULL, 'theme_setting_' . $row['sc_key'] );" sc_default="light" sc_tab_key="custom" sc_show_in_vse="0" sc_title="recaptcha2_theme" sc_order="11" sc_condition="return \IPS\Settings::i()-&gt;bot_antispam_type === 'recaptcha2';"/>
+  <field sc_key="responsive" sc_type="YesNo" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="1" sc_tab_key="custom" sc_show_in_vse="0" sc_title="themesetting_responsive" sc_order="1" sc_condition="">1</field>
+  <field sc_key="rounded_photos" sc_type="YesNo" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="1" sc_tab_key="custom" sc_show_in_vse="0" sc_title="themesetting_rounded_photos" sc_order="2" sc_condition="">1</field>
+  <field sc_key="secondary_title" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#3d5e78" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_secondary_title" sc_order="7" sc_condition="">#3d5e78</field>
+  <field sc_key="secondary_title_font" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#ffffff" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_secondary_title_font" sc_order="8" sc_condition="">#ffffff</field>
+  <field sc_key="section_title" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#304d66" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_section_title" sc_order="5" sc_condition="">#304d66</field>
+  <field sc_key="section_title_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_section_title_font" sc_order="6" sc_condition="">#ffffff</field>
+  <field sc_key="selected" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ebf4f9" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_selected" sc_order="9" sc_condition="">#ebf4f9</field>
+  <field sc_key="sidebar_position" sc_type="Select" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;left&quot;,&quot;value&quot;:&quot;Left&quot;},{&quot;key&quot;:&quot;right&quot;,&quot;value&quot;:&quot;Right&quot;}]" sc_default="right" sc_tab_key="custom" sc_show_in_vse="0" sc_title="themesetting_sidebar_position" sc_order="3" sc_condition="">right</field>
+  <field sc_key="sidebar_responsive" sc_type="YesNo" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="1" sc_tab_key="custom" sc_show_in_vse="1" sc_title="themesetting_sidebar_responsive" sc_order="4" sc_condition="">1</field>
+  <field sc_key="step_background" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ad1457" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_step_background" sc_order="22" sc_condition="">#ad1457</field>
+  <field sc_key="tab_background" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#3d648a" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_tabs_background" sc_order="27" sc_condition="">#3d648a</field>
+  <field sc_key="text_color" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#525252" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_text_color" sc_order="1" sc_condition="">#525252</field>
+  <field sc_key="text_light" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#9c9c9c" sc_tab_key="textcolors" sc_show_in_vse="0" sc_title="themesetting_text_light" sc_order="2" sc_condition="">#9c9c9c</field>
+  <field sc_key="timeline_color" sc_type="Color" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}]" sc_default="#4d4d4d" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="activity_stream_timeline" sc_order="23" sc_condition="">#4d4d4d</field>
+  <field sc_key="very_light_button" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#ffffff" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_very_light_button" sc_order="11" sc_condition="">#ffffff</field>
+  <field sc_key="very_light_button_font" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#333333" sc_tab_key="buttoncolors" sc_show_in_vse="0" sc_title="themesetting_very_light_button_font" sc_order="12" sc_condition="">#333333</field>
+  <field sc_key="widget_title_bar" sc_type="Color" sc_multiple="0" sc_content="[]" sc_default="#3c6994" sc_tab_key="frontendcolors" sc_show_in_vse="0" sc_title="themesetting_widget_title_bar" sc_order="14" sc_condition="">#3c6994</field>
+ </app>
+ <app key="forums" version="101040">
+  <field sc_key="forum_layout" sc_type="Select" sc_multiple="0" sc_content="[{&quot;key&quot;:&quot;grid&quot;,&quot;value&quot;:&quot;Grid View&quot;},{&quot;key&quot;:&quot;traditional&quot;,&quot;value&quot;:&quot;Traditional List&quot;}]" sc_default="traditional" sc_tab_key="custom" sc_show_in_vse="1" sc_title="themesetting_forum_layout" sc_order="5" sc_condition="">traditional</field>
+ </app>
+ <app key="downloads" version="101040"/>
+ <app key="awards" version="10005"/>
+ <app key="loginlogs" version="200000"/>
+ <app key="tos" version="300001"/>
+ <language/>
+</theme>
